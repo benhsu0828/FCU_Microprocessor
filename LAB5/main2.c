@@ -35,12 +35,12 @@ void Buzz(int number)
 void gameOver(int gameFlag){
 	clear_LCD();
 	if(gameFlag == 0){//O win
-		print_Line(0, 0, "O WIN");
+		print_Line(0,"O WIN");
 	}else if(gameFlag == 1){//X win
-		print_Line(0, 0, "X WIN");
+		print_Line(0,"X WIN");
 	
 	}else if (gameFlag == 2){//tie game
-		print_Line(0, 0, "Game over");
+		print_Line(0,"Game over");
 		
 	}
 
@@ -126,28 +126,28 @@ int main(void)
 			}else{
 				race[x/42+(y/20)*3] = OX%2;
 				gameCount++;
-				if(race[0]==race[1]&&race[1]==race[2]&&race[0]!=0){
+				if(race[0]==race[1]&&race[1]==race[2]&&race[0]!=2）{
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[0]==race[3]&&race[3]==race[6]&&race[0]!=0){
+				}else if(race[0]==race[3]&&race[3]==race[6]&&race[0]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[1]==race[4]&&race[4]==race[7]&&race[1]!=0){
+				}else if(race[1]==race[4]&&race[4]==race[7]&&race[1]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[2]==race[5]&&race[5]==race[8]&&race[2]!=0){
+				}else if(race[2]==race[5]&&race[5]==race[8]&&race[2]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[3]==race[4]&&race[4]==race[5]&&race[3]!=0){
+				}else if(race[3]==race[4]&&race[4]==race[5]&&race[3]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[6]==race[7]&&race[7]==race[8]&&race[6]!=0){
+				}else if(race[6]==race[7]&&race[7]==race[8]&&race[6]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[0]==race[4]&&race[4]==race[8]&&race[0]!=0){
+				}else if(race[0]==race[4]&&race[4]==race[8]&&race[0]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
-				}else if(race[2]==race[4]&&race[4]==race[6]&&race[2]!=0){
+				}else if(race[2]==race[4]&&race[4]==race[6]&&race[2]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
 				}
