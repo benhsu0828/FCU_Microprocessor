@@ -26,22 +26,22 @@ void Buzz(int number)
 	int i;
 	for (i=0; i<number; i++) {
       PB11=0; // PB11 = 0 to turn on Buzzer
-	  CLK_SysTickDelay(10000);	 // Delay 
-	  PB11=1; // PB11 = 1 to turn off Buzzer	
-	  CLK_SysTickDelay(10000);	 // Delay 
+	  CLK_SysTickDelay(10000);	 // Delay
+	  PB11=1; // PB11 = 1 to turn off Buzzer
+	  CLK_SysTickDelay(10000);	 // Delay
 	}
 }
 
 void gameOver(int gameFlag){
 	clear_LCD();
 	if(gameFlag == 0){//O win
-		print_Line(0,"O WIN");
+		print_Line(0, "O WIN");
 	}else if(gameFlag == 1){//X win
-		print_Line(0,"X WIN");
-	
+		print_Line(0, "X WIN");
+
 	}else if (gameFlag == 2){//tie game
-		print_Line(0,"Game over");
-		
+		print_Line(0, "Game over");
+
 	}
 
 }
@@ -53,22 +53,22 @@ int main(void)
 	int i = 0,j=0;
 	int keypadFlag = 0;
 	int cheak = 0;
-	int OX = 1;//O=0 X=1 
+	int OX = 1;//O=0 X=1
 	int	race[9] = {2,2,2,2,2,2,2,2,2};
 	int gameFlag = -1;
 	int gameCount = 0;
 
 	SYS_Init();
-	  
+
 	init_LCD();
 	clear_LCD();
 	GPIO_SetMode(PB, BIT11, GPIO_MODE_OUTPUT);
-	
+
 	OpenKeyPad();
-	
-  	x=0; y=0;	
+
+  	x=0; y=0;
 	clear_LCD();
-	
+
 	for(i = 1;i<3;i++){
 		draw_Line(42*i,0,42*i,64,FG_COLOR,BG_COLOR);
 	}
@@ -76,20 +76,23 @@ int main(void)
 		draw_Line(0,20*i,128,20*i,FG_COLOR,BG_COLOR);
 	}
 
-	
+
 	while(1) {
 		fill_Rectangle(x+1,y+4,x+41,y+18,FG_COLOR,BG_COLOR);
 		CLK_SysTickDelay(500000);                      // Delay for Vision
 		fill_Rectangle(x+1,y+4,x+41,y+18,BG_COLOR,BG_COLOR);
-		for(i=0;i<9;i++){
-			if(race[i]==0){
-				draw_Circle((i*42)+21, (i*20)+10,5,FG_COLOR,BG_COLOR);
-			}else if(race[i]==1){
-				draw_Line(x,y,x+38,y+16,FG_COLOR,BG_COLOR);
-				draw_Line(x,y+16,x+38,y,FG_COLOR,BG_COLOR);
+		for(i=0;i<3;i++){
+			for(j=0;j<3;j++){
+				if(race[i*3+j]==0){//print O
+					draw_Circle(j*42+21,i*20+10,10,FG_COLOR,BG_COLOR);
+				}else if(race[i*3+j]==1){
+					draw_Line(j*42,i*20,(j+1)*42,(i+1)*20,FG_COLOR,BG_COLOR);
+					draw_Line(j*42,(i+1)*20,(j+1)*42,i*20,FG_COLOR,BG_COLOR);
+				}
+				//printf("%d ",race[i*3+j]);
 			}
 		}
-		
+	//printf("\n"); //ok 
     keyin=ScanKey(); // Scan 3x3 keypad
 		if(keypadFlag!=keyin){
 			keypadFlag = keyin;
@@ -109,11 +112,13 @@ int main(void)
 						break;
 					case 6:
 						x+=42;
-						if(x>128) x=84;
+						if(x>=126) x=84;
 						break;
 					case 8:
 						y+=20;
-						if(y>40) y=44;
+						if(y>=40) y=44;
+						break;
+					default:
 						break;
 				}
 			}
@@ -126,7 +131,7 @@ int main(void)
 			}else{
 				race[x/42+(y/20)*3] = OX%2;
 				gameCount++;
-				if(race[0]==race[1]&&race[1]==race[2]&&race[0]!=2）{
+				if(race[0]==race[1]&&race[1]==race[2]&&race[0]!=2){
 					gameFlag = OX%2;
 					gameOver(gameFlag);
 				}else if(race[0]==race[3]&&race[3]==race[6]&&race[0]!=2){
@@ -158,8 +163,8 @@ int main(void)
 		}
 		}
 		if (gameFlag != -1){//to stuck the game result
-			keyin = ScanKey();
-			while(keyin == 0) keyin = ScanKey();
+			//keyin = ScanKey();
+			while(keyin == 0||keyin == 5) keyin = ScanKey();
 			for(i = 1;i<3;i++){
 				draw_Line(42*i,0,42*i,64,FG_COLOR,BG_COLOR);
 			}
@@ -169,13 +174,13 @@ int main(void)
 			//init to start new game
 			keypadFlag = 0;
 			cheak = 0;
-			OX = 1;//O=0 X=1 
+			OX = 1;//O=0 X=1
 			for(i = 0;i<8;i++){
 				race[i]	= 2;
 			}
 			gameFlag = -1;
 			gameCount = 0;
 		}
-		
-	}		
+
+	}
 }
