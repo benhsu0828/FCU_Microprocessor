@@ -32,6 +32,20 @@ void Buzz(int number)
 	}
 }
 
+void gameOver(int gameFlag){
+	clear_LCD();
+	if(gameFlag == 0){//O win
+		print_Line(0, 0, "O WIN");
+	}else if(gameFlag == 1){//X win
+		print_Line(0, 0, "X WIN");
+	
+	}else if (gameFlag == 2){//tie game
+		print_Line(0, 0, "Game over");
+		
+	}
+
+}
+
 int main(void)
 {
 	int16_t x=0,y=0;
@@ -41,6 +55,8 @@ int main(void)
 	int cheak = 0;
 	int OX = 1;//O=0 X=1 
 	int	race[9] = {2,2,2,2,2,2,2,2,2};
+	int gameFlag = -1;
+	int gameCount = 0;
 
 	SYS_Init();
 	  
@@ -50,7 +66,7 @@ int main(void)
 	
 	OpenKeyPad();
 	
-  x=0; y=0;	
+  	x=0; y=0;	
 	clear_LCD();
 	
 	for(i = 1;i<3;i++){
@@ -104,15 +120,61 @@ int main(void)
 		}
 		if(cheak == 1){
 			cheak = 0;
-			fill_Rectangle(x+1,y+4,x+41,y+18,BG_COLOR,BG_COLOR);
-			race[x/42+(y/20)*3] = OX%2;
-			if(OX%2 == 0){
-				 draw_Circle(x+21, y+10,5,FG_COLOR,BG_COLOR);
-			}	
-			else if(OX%2 == 1){
-				draw_Line(x,y,x+38,y+16,FG_COLOR,BG_COLOR);
-				draw_Line(x,y+16,x+38,y,FG_COLOR,BG_COLOR);
+			//fill_Rectangle(x+1,y+4,x+41,y+18,BG_COLOR,BG_COLOR);
+			if(race[x/42+(y/20)*3] != 2){//keep OX in last state
+				OX = (OX+1)%2;
+			}else{
+				race[x/42+(y/20)*3] = OX%2;
+				gameCount++;
+				if(race[0]==race[1]&&race[1]==race[2]&&race[0]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[0]==race[3]&&race[3]==race[6]&&race[0]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[1]==race[4]&&race[4]==race[7]&&race[1]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[2]==race[5]&&race[5]==race[8]&&race[2]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[3]==race[4]&&race[4]==race[5]&&race[3]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[6]==race[7]&&race[7]==race[8]&&race[6]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[0]==race[4]&&race[4]==race[8]&&race[0]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}else if(race[2]==race[4]&&race[4]==race[6]&&race[2]!=0){
+					gameFlag = OX%2;
+					gameOver(gameFlag);
+				}
+				if(gameCount == 9&& gameFlag == -1){
+					gameFlag = 2;
+					gameOver(gameFlag);
+				}
+		}
+		}
+		if (gameFlag != -1){//to stuck the game result
+			keyin = ScanKey();
+			while(keyin == 0) keyin = ScanKey();
+			for(i = 1;i<3;i++){
+				draw_Line(42*i,0,42*i,64,FG_COLOR,BG_COLOR);
 			}
+			for(i=1;i<3;i++){
+				draw_Line(0,20*i,128,20*i,FG_COLOR,BG_COLOR);
+			}
+			//init to start new game
+			keypadFlag = 0;
+			cheak = 0;
+			OX = 1;//O=0 X=1 
+			for(i = 0;i<8;i++){
+				race[i]	= 2;
+			}
+			gameFlag = -1;
+			gameCount = 0;
 		}
 		
 	}		
