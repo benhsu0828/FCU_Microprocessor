@@ -78,9 +78,9 @@ int main(void)
 
 
 	while(1) {
-		fill_Rectangle(x+1,y+4,x+41,y+18,FG_COLOR,BG_COLOR);
+		fill_Rectangle(x+1,y+10,x+41,y+18,FG_COLOR,BG_COLOR);
 		CLK_SysTickDelay(500000);                      // Delay for Vision
-		fill_Rectangle(x+1,y+4,x+41,y+18,BG_COLOR,BG_COLOR);
+		fill_Rectangle(x+1,y+10,x+41,y+18,BG_COLOR,BG_COLOR);
 		for(i=0;i<3;i++){
 			for(j=0;j<3;j++){
 				if(race[i*3+j]==0){//print O
@@ -165,7 +165,7 @@ int main(void)
 		if (gameFlag != -1){//to stuck the game result
 			//keyin = ScanKey();
 			while(keyin == 0||keyin == 5) keyin = ScanKey();
-			for(i = 1;i<3;i++){
+			/*for(i = 1;i<3;i++){
 				draw_Line(42*i,0,42*i,64,FG_COLOR,BG_COLOR);
 			}
 			for(i=1;i<3;i++){
@@ -181,7 +181,7 @@ int main(void)
 			gameFlag = -1;
 			gameCount = 0;
 			x = 0;
-			y = 0;
+			y = 0;*/
 		}
 
 	}
