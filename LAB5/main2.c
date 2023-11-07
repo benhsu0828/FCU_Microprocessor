@@ -116,7 +116,7 @@ int main(void)
 						break;
 					case 8:
 						y+=20;
-						if(y>=40) y=44;
+						if(y>=40) y=40;
 						break;
 					default:
 						break;
@@ -180,6 +180,8 @@ int main(void)
 			}
 			gameFlag = -1;
 			gameCount = 0;
+			x = 0;
+			y = 0;
 		}
 
 	}
