@@ -79,7 +79,7 @@ void EINT1_IRQHandler(void)
 	PA12=1; PA13=1; PA14=0;
    digit[3] = 5;
 	digit[0] = 0;
-	Buzz(2);
+	//Buzz(2);
 }
 
 void Init_EXTINT(void)
