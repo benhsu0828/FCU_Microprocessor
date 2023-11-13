@@ -69,13 +69,13 @@ void TMR1_IRQHandler(void)
 		if(redGreenLightFlag == 0){
 			//控制照片
 			clear_LCD();
-			draw_Bmp32x64(32, 0, FG_COLOR, BG_COLOR, greenPeople[cnt_1s%3]);
+			draw_Bmp64x64(32, 0, FG_COLOR, BG_COLOR, greenPeople[cnt_1s%3]);
 			//修改七段顯示器數字
 			digit[0]--;
 		}else if(redGreenLightFlag == 1){
 			//控制照片
 			clear_LCD();
-			draw_Bmp32x64(32, 0, FG_COLOR, BG_COLOR, redPeople);
+			draw_Bmp64x64(32, 0, FG_COLOR, BG_COLOR, redPeople);
 			//修改七段顯示器數字
 			digit[3]--;
 		}
