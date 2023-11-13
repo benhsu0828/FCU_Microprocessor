@@ -119,7 +119,7 @@ int main(void)
 	redGreenLightFlag = 0;//0 green 1 red
 	digit[3] = digit[2] = digit[1] = 0;
 	digit[0] = 9;
-	
+	PA12=1; PA13=0; PA14=1;
 	
 	
   while(1){
