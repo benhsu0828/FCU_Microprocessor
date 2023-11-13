@@ -1,7 +1,14 @@
-ies.h"
+#include <stdio.h>
+#include "NUC100Series.h"
+#include "MCU_init.h"
+#include "SYS_init.h"
+#include "string.h"
+#include <stdlib.h>
+#include "NUC100Series.h"
 #include "Seven_Segment.h"
 #include "LCD.h"
 #include "Scankey.h"
+
 
 volatile uint32_t index_5ms,cnt_5ms,cnt_100ms,cnt_1s;
 volatile int digit[4];
