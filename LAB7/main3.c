@@ -76,7 +76,7 @@ void Init_EXTINT(void)
     NVIC_EnableIRQ(EINT1_IRQn);
 
     // Enable interrupt de-bounce function and select de-bounce sampling cycle time
-    GPIO_SET_DEBOUNCE_TIME(GPIO_DBCLKSRC_LIRC, GPIO_DBCLKSEL_64);
+    GPIO_SET_DEBOUNCE_TIME(GPIO_DBCLKSRC_LIRC, GPIO_DBCLKSEL_256);
     GPIO_ENABLE_DEBOUNCE(PB, BIT15);
 }
 
@@ -133,9 +133,9 @@ return;
 if (PA->ISRC & BIT2) { // check if PB14 interrupt occurred
 		PA2=1;
 	  PA->ISRC |= BIT2;         // clear PA interrupt status  feeddog();Leave_PowerDown();
-if (PA3==0) { KEY_Flag =1; PA3=1;}
-if (PA4==0) { KEY_Flag =4; PA4=1;}
-if (PA5==0) { KEY_Flag =7; PA5=1;}
+if (PA3==0) { KEY_Flag =1; PA3=1;feeddog();}
+if (PA4==0) { KEY_Flag =4; PA4=1;feeddog();}
+if (PA5==0) { KEY_Flag =7; PA5=1;feeddog();}
 return;				
 }                     // else it is unexpected interrupts
 PA->ISRC = PA->ISRC;	      // clear all GPB pins
@@ -177,14 +177,16 @@ int32_t main (void)
 	
 	feeddog();
   while(1) {
-		printf("%d",KEY_Flag);
+		//printf("%d",KEY_Flag);
 		switch(KEY_Flag){
 			case 1:// 1
 				clear_LCD();
+				KEY_Flag = 0;
 				num[countFlag] = num[countFlag]*10 + 1;
 				break;
 			case 2:// 2
 				clear_LCD();
+				KEY_Flag = 0;
 				num[countFlag] = num[countFlag]*10 + 2;
 				break;
 			case 3:// + op = 1
@@ -195,10 +197,12 @@ int32_t main (void)
 				break;
 			case 4:// 3
 				clear_LCD();
+				KEY_Flag = 0;
 				num[countFlag] = num[countFlag]*10 + 3;
 				break;
 			case 5:// 4
 				clear_LCD();
+				KEY_Flag = 0;
 				num[countFlag] = num[countFlag]*10 + 4;
 				break;
 			case 6:// - op = 2
@@ -247,7 +251,6 @@ int32_t main (void)
 				print_Line(3 ,line3);
 			}
 			
-		KEY_Flag = 0;
   }
 }
 
