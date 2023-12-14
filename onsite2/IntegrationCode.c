@@ -46,7 +46,7 @@ void EINT1_IRQHandler(void)
     GPIO_CLR_INT_FLAG(PB, BIT15);  // Clear GPIO interrupt flag
 }
 
-void TMR1_IRQHandler(void){
+void TMR0_IRQHandler(void){
     if (cnt0_5ms % 20 == 0) 
 	{
 		cnt0_100ms++;
