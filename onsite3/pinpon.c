@@ -158,6 +158,28 @@ void UART02_IRQHandler(void)
     }
 }
 
+void ADC_IRQHandler(void)
+{
+    uint32_t u32Flag;
+
+    // Get ADC conversion finish interrupt flag
+    u32Flag = ADC_GET_INT_FLAG(ADC, ADC_ADF_INT);
+
+    if(u32Flag & ADC_ADF_INT)
+        u8ADF = 1;
+
+    ADC_CLR_INT_FLAG(ADC, u32Flag);
+}
+
+void getVR(){
+			ADC_START_CONV(ADC);
+      while (u8ADF == 0);
+      u32ADCvalue = ADC_GET_CONVERSION_DATA(ADC, 7);
+			duty = u32ADCvalue*100/4096;
+			//printf("ADC7 = %d, duty =%d\n", u32ADCvalue, duty);    
+      ADC_DisableInt(ADC, ADC_ADF_INT);
+}
+
 void Init_ALL(void)
 {
     SYS_Init(); 
@@ -210,6 +232,11 @@ void Init_ALL(void)
     NVIC_SetPriority(GPAB_IRQn,3);
     GPIO_SET_DEBOUNCE_TIME(GPIO_DBCLKSRC_LIRC, GPIO_DBCLKSEL_256);
     GPIO_ENABLE_DEBOUNCE(PA, (BIT0 | BIT1 | BIT2));	
+    //ADC
+	ADC_Open(ADC, ADC_INPUT_MODE, ADC_OPERATION_MODE, ADC_CHANNEL_MASK);
+    ADC_POWER_ON(ADC);
+    ADC_EnableInt(ADC, ADC_ADF_INT);
+    NVIC_EnableIRQ(ADC_IRQn);
     //UART
     UART_Open(UART0, 115200);                     // set UART0 baud rate
     UART_ENABLE_INT(UART0, UART_IER_RDA_IEN_Msk); // enable UART0 interrupt (triggerred by Read-Data-Available)
@@ -228,6 +255,7 @@ int main(void)
 
 	//guess
 	 while(1) {
+        getVR();
 		 if(KEY_Flag!=0){
 			//printf("key: %d\n",KEY_Flag);
 			tmp[3] = tmp[2];
