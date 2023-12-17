@@ -94,16 +94,13 @@ int32_t main (void)
 		P500ms, P500ms, P500ms, P500ms,	P500ms, P500ms, P500ms, P500ms,	P500ms, P500ms, P500ms, P500ms
 		};
 
-		Init_ALL();
-		clear_LCD();
-    PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
-    PWM_Start(PWM1, PWM_CH_0_MASK);
-		u8ADF = 0;		
-		
-
-	  
-		PWM_ConfigOutputChannel(PWM1, PWM_CH0, C4, 90);
-		PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
+	Init_ALL();
+	clear_LCD();
+	PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
+	PWM_Start(PWM1, PWM_CH_0_MASK);
+	u8ADF = 0;		
+	PWM_ConfigOutputChannel(PWM1, PWM_CH0, C4, 90);
+	PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
 		  
 	
     while(1) {
