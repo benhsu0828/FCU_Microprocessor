@@ -1,0 +1,2248 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: .\obj\Sample.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x000000d5
+    Flags: EF_ARM_HASENTRY (0x05000002)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Built with
+    ARM C/C++ Compiler, 4.1 [Build 894]
+    ARM Assembler, 4.1 [Build 894]
+    ARM Linker, 4.1 [Build 894] 
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 407020 (0x000635ec)
+    Section header offset: 407052 (0x0006360c)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 6792 bytes (4468 bytes in file)
+    Virtual address: 0x00000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_RO' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 4376 bytes (alignment 4)
+    Address: 0x00000000
+
+    $d.realdata
+    RESET
+    __Vectors
+        0x00000000:    20000970    p..     DCD    536873328
+        0x00000004:    000000d5    ....    DCD    213
+        0x00000008:    000000f5    ....    DCD    245
+        0x0000000c:    000000f7    ....    DCD    247
+        0x00000010:    00000000    ....    DCD    0
+        0x00000014:    00000000    ....    DCD    0
+        0x00000018:    00000000    ....    DCD    0
+        0x0000001c:    00000000    ....    DCD    0
+        0x00000020:    00000000    ....    DCD    0
+        0x00000024:    00000000    ....    DCD    0
+        0x00000028:    00000000    ....    DCD    0
+        0x0000002c:    000000f9    ....    DCD    249
+        0x00000030:    00000000    ....    DCD    0
+        0x00000034:    00000000    ....    DCD    0
+        0x00000038:    000000fb    ....    DCD    251
+        0x0000003c:    000000fd    ....    DCD    253
+        0x00000040:    000000ff    ....    DCD    255
+        0x00000044:    000000ff    ....    DCD    255
+        0x00000048:    000000ff    ....    DCD    255
+        0x0000004c:    000000ff    ....    DCD    255
+        0x00000050:    000000ff    ....    DCD    255
+        0x00000054:    000000ff    ....    DCD    255
+        0x00000058:    000000ff    ....    DCD    255
+        0x0000005c:    000000ff    ....    DCD    255
+        0x00000060:    000000ff    ....    DCD    255
+        0x00000064:    000000ff    ....    DCD    255
+        0x00000068:    000000ff    ....    DCD    255
+        0x0000006c:    000000ff    ....    DCD    255
+        0x00000070:    000008a5    ....    DCD    2213
+        0x00000074:    000000ff    ....    DCD    255
+        0x00000078:    000000ff    ....    DCD    255
+        0x0000007c:    000000ff    ....    DCD    255
+        0x00000080:    000000ff    ....    DCD    255
+        0x00000084:    000000ff    ....    DCD    255
+        0x00000088:    000000ff    ....    DCD    255
+        0x0000008c:    000000ff    ....    DCD    255
+        0x00000090:    000000ff    ....    DCD    255
+        0x00000094:    000000ff    ....    DCD    255
+        0x00000098:    000000ff    ....    DCD    255
+        0x0000009c:    000000ff    ....    DCD    255
+        0x000000a0:    000000ff    ....    DCD    255
+        0x000000a4:    000000ff    ....    DCD    255
+        0x000000a8:    000000ff    ....    DCD    255
+        0x000000ac:    000000ff    ....    DCD    255
+        0x000000b0:    000000ff    ....    DCD    255
+        0x000000b4:    000000ff    ....    DCD    255
+        0x000000b8:    000000ff    ....    DCD    255
+        0x000000bc:    000000ff    ....    DCD    255
+    $t
+    .ARM.Collect$$$$00000000
+    .ARM.Collect$$$$00000001
+    __main
+    _main_stk
+        0x000000c0:    4803        .H      LDR      r0,__lit__00000000 ; [0xd0] = 0x20000970
+        0x000000c2:    4685        .F      MOV      sp,r0
+    .ARM.Collect$$$$00000004
+    _main_scatterload
+        0x000000c4:    f000f842    ..B.    BL       __scatterload ; 0x14c
+    .ARM.Collect$$$$00000008
+    .ARM.Collect$$$$00000009
+    __main_after_scatterload
+    _main_clock
+    _main_init
+        0x000000c8:    4800        .H      LDR      r0,[pc,#0] ; [0xcc] = 0xfd5
+        0x000000ca:    4700        .G      BX       r0
+    $d
+        0x000000cc:    00000fd5    ....    DCD    4053
+    .ARM.Collect$$$$00002712
+    __lit__00000000
+        0x000000d0:    20000970    p..     DCD    536873328
+    $t
+    .text
+    Reset_Handler
+        0x000000d4:    480a        .H      LDR      r0,[pc,#40] ; [0x100] = 0x50000100
+        0x000000d6:    490b        .I      LDR      r1,[pc,#44] ; [0x104] = 0x59
+        0x000000d8:    6001        .`      STR      r1,[r0,#0]
+        0x000000da:    490b        .I      LDR      r1,[pc,#44] ; [0x108] = 0x16
+        0x000000dc:    6001        .`      STR      r1,[r0,#0]
+        0x000000de:    490b        .I      LDR      r1,[pc,#44] ; [0x10c] = 0x88
+        0x000000e0:    6001        .`      STR      r1,[r0,#0]
+        0x000000e2:    4a0b        .J      LDR      r2,[pc,#44] ; [0x110] = 0x50000024
+        0x000000e4:    490b        .I      LDR      r1,[pc,#44] ; [0x114] = 0x5aa5
+        0x000000e6:    6011        .`      STR      r1,[r2,#0]
+        0x000000e8:    2100        .!      MOVS     r1,#0
+        0x000000ea:    6001        .`      STR      r1,[r0,#0]
+        0x000000ec:    480a        .H      LDR      r0,[pc,#40] ; [0x118] = 0x8a1
+        0x000000ee:    4780        .G      BLX      r0
+        0x000000f0:    480a        .H      LDR      r0,[pc,#40] ; [0x11c] = 0xc1
+        0x000000f2:    4700        .G      BX       r0
+    NMI_Handler
+        0x000000f4:    e7fe        ..      B        NMI_Handler ; 0xf4
+    HardFault_Handler
+        0x000000f6:    e7fe        ..      B        HardFault_Handler ; 0xf6
+    SVC_Handler
+        0x000000f8:    e7fe        ..      B        SVC_Handler ; 0xf8
+    PendSV_Handler
+        0x000000fa:    e7fe        ..      B        PendSV_Handler ; 0xfa
+    SysTick_Handler
+        0x000000fc:    e7fe        ..      B        SysTick_Handler ; 0xfc
+    Default_Handler
+    ACMP_IRQHandler
+    ADC_IRQHandler
+    BOD_IRQHandler
+    CAN0_IRQHandler
+    CAN1_IRQHandler
+    EINT0_IRQHandler
+    EINT1_IRQHandler
+    GPAB_IRQHandler
+    GPCDEF_IRQHandler
+    I2C0_IRQHandler
+    I2C1_IRQHandler
+    I2S_IRQHandler
+    PDMA_IRQHandler
+    PS2_IRQHandler
+    PWMA_IRQHandler
+    PWMB_IRQHandler
+    PWRWU_IRQHandler
+    RTC_IRQHandler
+    SC012_IRQHandler
+    SPI0_IRQHandler
+    SPI1_IRQHandler
+    SPI2_IRQHandler
+    SPI3_IRQHandler
+    TMR0_IRQHandler
+    TMR1_IRQHandler
+    TMR2_IRQHandler
+    TMR3_IRQHandler
+    UART1_IRQHandler
+    USBD_IRQHandler
+    WDT_IRQHandler
+        0x000000fe:    e7fe        ..      B        Default_Handler ; 0xfe
+    $d
+        0x00000100:    50000100    ...P    DCD    1342177536
+        0x00000104:    00000059    Y...    DCD    89
+        0x00000108:    00000016    ....    DCD    22
+        0x0000010c:    00000088    ....    DCD    136
+        0x00000110:    50000024    $..P    DCD    1342177316
+        0x00000114:    00005aa5    .Z..    DCD    23205
+        0x00000118:    000008a1    ....    DCD    2209
+        0x0000011c:    000000c1    ....    DCD    193
+    $t
+    .text
+    __aeabi_uidiv
+    __aeabi_uidivmod
+        0x00000120:    b530        0.      PUSH     {r4,r5,lr}
+        0x00000122:    460b        .F      MOV      r3,r1
+        0x00000124:    4601        .F      MOV      r1,r0
+        0x00000126:    2000        .       MOVS     r0,#0
+        0x00000128:    2220         "      MOVS     r2,#0x20
+        0x0000012a:    2401        .$      MOVS     r4,#1
+        0x0000012c:    e009        ..      B        0x142 ; __aeabi_uidiv + 34
+        0x0000012e:    460d        .F      MOV      r5,r1
+        0x00000130:    40d5        .@      LSRS     r5,r5,r2
+        0x00000132:    429d        .B      CMP      r5,r3
+        0x00000134:    d305        ..      BCC      0x142 ; __aeabi_uidiv + 34
+        0x00000136:    461d        .F      MOV      r5,r3
+        0x00000138:    4095        .@      LSLS     r5,r5,r2
+        0x0000013a:    1b49        I.      SUBS     r1,r1,r5
+        0x0000013c:    4625        %F      MOV      r5,r4
+        0x0000013e:    4095        .@      LSLS     r5,r5,r2
+        0x00000140:    1940        @.      ADDS     r0,r0,r5
+        0x00000142:    4615        .F      MOV      r5,r2
+        0x00000144:    1e52        R.      SUBS     r2,r2,#1
+        0x00000146:    2d00        .-      CMP      r5,#0
+        0x00000148:    dcf1        ..      BGT      0x12e ; __aeabi_uidiv + 14
+        0x0000014a:    bd30        0.      POP      {r4,r5,pc}
+    .text
+    __scatterload
+    __scatterload_rt2
+        0x0000014c:    4c06        .L      LDR      r4,[pc,#24] ; [0x168] = 0x10f8
+        0x0000014e:    2501        .%      MOVS     r5,#1
+        0x00000150:    4e06        .N      LDR      r6,[pc,#24] ; [0x16c] = 0x1118
+        0x00000152:    e005        ..      B        0x160 ; __scatterload + 20
+        0x00000154:    4620         F      MOV      r0,r4
+        0x00000156:    68e3        .h      LDR      r3,[r4,#0xc]
+        0x00000158:    c807        ..      LDM      r0,{r0-r2}
+        0x0000015a:    432b        +C      ORRS     r3,r3,r5
+        0x0000015c:    4798        .G      BLX      r3
+        0x0000015e:    3410        .4      ADDS     r4,r4,#0x10
+        0x00000160:    42b4        .B      CMP      r4,r6
+        0x00000162:    d3f7        ..      BCC      0x154 ; __scatterload + 8
+        0x00000164:    f7ffffb0    ....    BL       __main_after_scatterload ; 0xc8
+    $d
+        0x00000168:    000010f8    ....    DCD    4344
+        0x0000016c:    00001118    ....    DCD    4376
+    $t
+    i.CLK_EnableModuleClock
+    CLK_EnableModuleClock
+        0x00000170:    b51f        ..      PUSH     {r0-r4,lr}
+        0x00000172:    4c0a        .L      LDR      r4,[pc,#40] ; [0x19c] = 0x1090
+        0x00000174:    3418        .4      ADDS     r4,r4,#0x18
+        0x00000176:    cc1e        ..      LDM      r4,{r1-r4}
+        0x00000178:    9403        ..      STR      r4,[sp,#0xc]
+        0x0000017a:    466c        lF      MOV      r4,sp
+        0x0000017c:    c40e        ..      STM      r4!,{r1-r3}
+        0x0000017e:    0f81        ..      LSRS     r1,r0,#30
+        0x00000180:    008a        ..      LSLS     r2,r1,#2
+        0x00000182:    4669        iF      MOV      r1,sp
+        0x00000184:    588a        .X      LDR      r2,[r1,r2]
+        0x00000186:    4906        .I      LDR      r1,[pc,#24] ; [0x1a0] = 0x50000200
+        0x00000188:    1851        Q.      ADDS     r1,r2,r1
+        0x0000018a:    684a        Jh      LDR      r2,[r1,#4]
+        0x0000018c:    06c3        ..      LSLS     r3,r0,#27
+        0x0000018e:    0edb        ..      LSRS     r3,r3,#27
+        0x00000190:    2001        .       MOVS     r0,#1
+        0x00000192:    4098        .@      LSLS     r0,r0,r3
+        0x00000194:    4302        .C      ORRS     r2,r2,r0
+        0x00000196:    604a        J`      STR      r2,[r1,#4]
+        0x00000198:    bd1f        ..      POP      {r0-r4,pc}
+    $d
+        0x0000019a:    0000        ..      DCW    0
+        0x0000019c:    00001090    ....    DCD    4240
+        0x000001a0:    50000200    ...P    DCD    1342177792
+    $t
+    i.CLK_EnablePLL
+    CLK_EnablePLL
+        0x000001a4:    b5f0        ..      PUSH     {r4-r7,lr}
+        0x000001a6:    0007        ..      MOVS     r7,r0
+        0x000001a8:    460c        .F      MOV      r4,r1
+        0x000001aa:    4856        VH      LDR      r0,[pc,#344] ; [0x304] = 0x50000200
+        0x000001ac:    b085        ..      SUB      sp,sp,#0x14
+        0x000001ae:    4954        TI      LDR      r1,[pc,#336] ; [0x300] = 0x10000
+        0x000001b0:    6201        .b      STR      r1,[r0,#0x20]
+        0x000001b2:    4e55        UN      LDR      r6,[pc,#340] ; [0x308] = 0xb71b00
+        0x000001b4:    6801        .h      LDR      r1,[r0,#0]
+        0x000001b6:    d013        ..      BEQ      0x1e0 ; CLK_EnablePLL + 60
+        0x000001b8:    2204        ."      MOVS     r2,#4
+        0x000001ba:    4311        .C      ORRS     r1,r1,r2
+        0x000001bc:    6001        .`      STR      r1,[r0,#0]
+        0x000001be:    2010        .       MOVS     r0,#0x10
+        0x000001c0:    f000f9ea    ....    BL       CLK_WaitClockReady ; 0x598
+        0x000001c4:    2001        .       MOVS     r0,#1
+        0x000001c6:    04c0        ..      LSLS     r0,r0,#19
+        0x000001c8:    9002        ..      STR      r0,[sp,#8]
+        0x000001ca:    4850        PH      LDR      r0,[pc,#320] ; [0x30c] = 0x1518000
+        0x000001cc:    2504        .%      MOVS     r5,#4
+        0x000001ce:    9003        ..      STR      r0,[sp,#0xc]
+        0x000001d0:    484f        OH      LDR      r0,[pc,#316] ; [0x310] = 0xfa0a1eff
+        0x000001d2:    4950        PI      LDR      r1,[pc,#320] ; [0x314] = 0x5f5e0ff
+        0x000001d4:    1820         .      ADDS     r0,r4,r0
+        0x000001d6:    4288        .B      CMP      r0,r1
+        0x000001d8:    d80d        ..      BHI      0x1f6 ; CLK_EnablePLL + 82
+        0x000001da:    2000        .       MOVS     r0,#0
+        0x000001dc:    9004        ..      STR      r0,[sp,#0x10]
+        0x000001de:    e01c        ..      B        0x21a ; CLK_EnablePLL + 118
+        0x000001e0:    2201        ."      MOVS     r2,#1
+        0x000001e2:    4311        .C      ORRS     r1,r1,r2
+        0x000001e4:    6001        .`      STR      r1,[r0,#0]
+        0x000001e6:    4610        .F      MOV      r0,r2
+        0x000001e8:    f000f9d6    ....    BL       CLK_WaitClockReady ; 0x598
+        0x000001ec:    2000        .       MOVS     r0,#0
+        0x000001ee:    2502        .%      MOVS     r5,#2
+        0x000001f0:    9603        ..      STR      r6,[sp,#0xc]
+        0x000001f2:    9002        ..      STR      r0,[sp,#8]
+        0x000001f4:    e7ec        ..      B        0x1d0 ; CLK_EnablePLL + 44
+        0x000001f6:    4848        HH      LDR      r0,[pc,#288] ; [0x318] = 0xfd050f7f
+        0x000001f8:    4948        HI      LDR      r1,[pc,#288] ; [0x31c] = 0x2faf07f
+        0x000001fa:    1820         .      ADDS     r0,r4,r0
+        0x000001fc:    4288        .B      CMP      r0,r1
+        0x000001fe:    d803        ..      BHI      0x208 ; CLK_EnablePLL + 100
+        0x00000200:    2001        .       MOVS     r0,#1
+        0x00000202:    0064        d.      LSLS     r4,r4,#1
+        0x00000204:    9004        ..      STR      r0,[sp,#0x10]
+        0x00000206:    e008        ..      B        0x21a ; CLK_EnablePLL + 118
+        0x00000208:    4845        EH      LDR      r0,[pc,#276] ; [0x320] = 0xfe8287c0
+        0x0000020a:    4945        EI      LDR      r1,[pc,#276] ; [0x320] = 0xfe8287c0
+        0x0000020c:    1820         .      ADDS     r0,r4,r0
+        0x0000020e:    4249        IB      RSBS     r1,r1,#0
+        0x00000210:    4288        .B      CMP      r0,r1
+        0x00000212:    d849        I.      BHI      0x2a8 ; CLK_EnablePLL + 260
+        0x00000214:    2003        .       MOVS     r0,#3
+        0x00000216:    00a4        ..      LSLS     r4,r4,#2
+        0x00000218:    9004        ..      STR      r0,[sp,#0x10]
+        0x0000021a:    2600        .&      MOVS     r6,#0
+        0x0000021c:    43f6        .C      MVNS     r6,r6
+        0x0000021e:    2000        .       MOVS     r0,#0
+        0x00000220:    9000        ..      STR      r0,[sp,#0]
+        0x00000222:    9001        ..      STR      r0,[sp,#4]
+        0x00000224:    e021        !.      B        0x26a ; CLK_EnablePLL + 198
+        0x00000226:    4629        )F      MOV      r1,r5
+        0x00000228:    9803        ..      LDR      r0,[sp,#0xc]
+        0x0000022a:    f7ffff79    ..y.    BL       __aeabi_uidiv ; 0x120
+        0x0000022e:    493d        =I      LDR      r1,[pc,#244] ; [0x324] = 0xffe795ff
+        0x00000230:    4a3d        =J      LDR      r2,[pc,#244] ; [0x328] = 0xcc77bf
+        0x00000232:    1841        A.      ADDS     r1,r0,r1
+        0x00000234:    4291        .B      CMP      r1,r2
+        0x00000236:    d217        ..      BCS      0x268 ; CLK_EnablePLL + 196
+        0x00000238:    2202        ."      MOVS     r2,#2
+        0x0000023a:    4b35        5K      LDR      r3,[pc,#212] ; [0x310] = 0xfa0a1eff
+        0x0000023c:    4601        .F      MOV      r1,r0
+        0x0000023e:    4351        QC      MULS     r1,r2,r1
+        0x00000240:    1c5b        [.      ADDS     r3,r3,#1
+        0x00000242:    18cf        ..      ADDS     r7,r1,r3
+        0x00000244:    425b        [B      RSBS     r3,r3,#0
+        0x00000246:    429f        .B      CMP      r7,r3
+        0x00000248:    d80a        ..      BHI      0x260 ; CLK_EnablePLL + 188
+        0x0000024a:    42a1        .B      CMP      r1,r4
+        0x0000024c:    d901        ..      BLS      0x252 ; CLK_EnablePLL + 174
+        0x0000024e:    1b0b        ..      SUBS     r3,r1,r4
+        0x00000250:    e000        ..      B        0x254 ; CLK_EnablePLL + 176
+        0x00000252:    1a63        c.      SUBS     r3,r4,r1
+        0x00000254:    42b3        .B      CMP      r3,r6
+        0x00000256:    d203        ..      BCS      0x260 ; CLK_EnablePLL + 188
+        0x00000258:    001e        ..      MOVS     r6,r3
+        0x0000025a:    9500        ..      STR      r5,[sp,#0]
+        0x0000025c:    9201        ..      STR      r2,[sp,#4]
+        0x0000025e:    d003        ..      BEQ      0x268 ; CLK_EnablePLL + 196
+        0x00000260:    4932        2I      LDR      r1,[pc,#200] ; [0x32c] = 0x201
+        0x00000262:    1c52        R.      ADDS     r2,r2,#1
+        0x00000264:    428a        .B      CMP      r2,r1
+        0x00000266:    d9e8        ..      BLS      0x23a ; CLK_EnablePLL + 150
+        0x00000268:    1c6d        m.      ADDS     r5,r5,#1
+        0x0000026a:    2d21        !-      CMP      r5,#0x21
+        0x0000026c:    d9db        ..      BLS      0x226 ; CLK_EnablePLL + 130
+        0x0000026e:    9804        ..      LDR      r0,[sp,#0x10]
+        0x00000270:    9902        ..      LDR      r1,[sp,#8]
+        0x00000272:    0380        ..      LSLS     r0,r0,#14
+        0x00000274:    4308        .C      ORRS     r0,r0,r1
+        0x00000276:    9900        ..      LDR      r1,[sp,#0]
+        0x00000278:    2201        ."      MOVS     r2,#1
+        0x0000027a:    0249        I.      LSLS     r1,r1,#9
+        0x0000027c:    0292        ..      LSLS     r2,r2,#10
+        0x0000027e:    1a89        ..      SUBS     r1,r1,r2
+        0x00000280:    4308        .C      ORRS     r0,r0,r1
+        0x00000282:    9901        ..      LDR      r1,[sp,#4]
+        0x00000284:    1e89        ..      SUBS     r1,r1,#2
+        0x00000286:    4308        .C      ORRS     r0,r0,r1
+        0x00000288:    491e        .I      LDR      r1,[pc,#120] ; [0x304] = 0x50000200
+        0x0000028a:    6208        .b      STR      r0,[r1,#0x20]
+        0x0000028c:    2004        .       MOVS     r0,#4
+        0x0000028e:    f000f983    ....    BL       CLK_WaitClockReady ; 0x598
+        0x00000292:    9904        ..      LDR      r1,[sp,#0x10]
+        0x00000294:    9800        ..      LDR      r0,[sp,#0]
+        0x00000296:    1c49        I.      ADDS     r1,r1,#1
+        0x00000298:    4341        AC      MULS     r1,r0,r1
+        0x0000029a:    9803        ..      LDR      r0,[sp,#0xc]
+        0x0000029c:    f7ffff40    ..@.    BL       __aeabi_uidiv ; 0x120
+        0x000002a0:    9901        ..      LDR      r1,[sp,#4]
+        0x000002a2:    4348        HC      MULS     r0,r1,r0
+        0x000002a4:    b005        ..      ADD      sp,sp,#0x14
+        0x000002a6:    bdf0        ..      POP      {r4-r7,pc}
+        0x000002a8:    2f00        ./      CMP      r7,#0
+        0x000002aa:    d00f        ..      BEQ      0x2cc ; CLK_EnablePLL + 296
+        0x000002ac:    4920         I      LDR      r1,[pc,#128] ; [0x330] = 0xd66f
+        0x000002ae:    4815        .H      LDR      r0,[pc,#84] ; [0x304] = 0x50000200
+        0x000002b0:    6201        .b      STR      r1,[r0,#0x20]
+        0x000002b2:    2004        .       MOVS     r0,#4
+        0x000002b4:    f000f970    ..p.    BL       CLK_WaitClockReady ; 0x598
+        0x000002b8:    a01e        ..      ADR      r0,{pc}+0x7c ; 0x334
+        0x000002ba:    6800        .h      LDR      r0,[r0,#0]
+        0x000002bc:    9000        ..      STR      r0,[sp,#0]
+        0x000002be:    4811        .H      LDR      r0,[pc,#68] ; [0x304] = 0x50000200
+        0x000002c0:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x000002c2:    1300        ..      ASRS     r0,r0,#12
+        0x000002c4:    4201        .B      TST      r1,r0
+        0x000002c6:    d003        ..      BEQ      0x2d0 ; CLK_EnablePLL + 300
+        0x000002c8:    2000        .       MOVS     r0,#0
+        0x000002ca:    e7eb        ..      B        0x2a4 ; CLK_EnablePLL + 256
+        0x000002cc:    491a        .I      LDR      r1,[pc,#104] ; [0x338] = 0xc22e
+        0x000002ce:    e7ee        ..      B        0x2ae ; CLK_EnablePLL + 266
+        0x000002d0:    0308        ..      LSLS     r0,r1,#12
+        0x000002d2:    d500        ..      BPL      0x2d6 ; CLK_EnablePLL + 306
+        0x000002d4:    4e0d        .N      LDR      r6,[pc,#52] ; [0x30c] = 0x1518000
+        0x000002d6:    0388        ..      LSLS     r0,r1,#14
+        0x000002d8:    d501        ..      BPL      0x2de ; CLK_EnablePLL + 314
+        0x000002da:    4630        0F      MOV      r0,r6
+        0x000002dc:    e7e2        ..      B        0x2a4 ; CLK_EnablePLL + 256
+        0x000002de:    0408        ..      LSLS     r0,r1,#16
+        0x000002e0:    0f80        ..      LSRS     r0,r0,#30
+        0x000002e2:    466a        jF      MOV      r2,sp
+        0x000002e4:    5c10        .\      LDRB     r0,[r2,r0]
+        0x000002e6:    05ca        ..      LSLS     r2,r1,#23
+        0x000002e8:    0489        ..      LSLS     r1,r1,#18
+        0x000002ea:    0ec9        ..      LSRS     r1,r1,#27
+        0x000002ec:    1c89        ..      ADDS     r1,r1,#2
+        0x000002ee:    0dd2        ..      LSRS     r2,r2,#23
+        0x000002f0:    4341        AC      MULS     r1,r0,r1
+        0x000002f2:    1c92        ..      ADDS     r2,r2,#2
+        0x000002f4:    08b0        ..      LSRS     r0,r6,#2
+        0x000002f6:    4350        PC      MULS     r0,r2,r0
+        0x000002f8:    f7ffff12    ....    BL       __aeabi_uidiv ; 0x120
+        0x000002fc:    0080        ..      LSLS     r0,r0,#2
+        0x000002fe:    e7d1        ..      B        0x2a4 ; CLK_EnablePLL + 256
+    $d
+        0x00000300:    00010000    ....    DCD    65536
+        0x00000304:    50000200    ...P    DCD    1342177792
+        0x00000308:    00b71b00    ....    DCD    12000000
+        0x0000030c:    01518000    ..Q.    DCD    22118400
+        0x00000310:    fa0a1eff    ....    DCD    4194967295
+        0x00000314:    05f5e0ff    ....    DCD    99999999
+        0x00000318:    fd050f7f    ....    DCD    4244967295
+        0x0000031c:    02faf07f    ....    DCD    49999999
+        0x00000320:    fe8287c0    ....    DCD    4269967296
+        0x00000324:    ffe795ff    ....    DCD    4293367295
+        0x00000328:    00cc77bf    .w..    DCD    13399999
+        0x0000032c:    00000201    ....    DCD    513
+        0x00000330:    0000d66f    o...    DCD    54895
+        0x00000334:    04020201    ....    DCD    67240449
+        0x00000338:    0000c22e    ....    DCD    49710
+    $t
+    i.CLK_EnableXtalRC
+    CLK_EnableXtalRC
+        0x0000033c:    4902        .I      LDR      r1,[pc,#8] ; [0x348] = 0x50000200
+        0x0000033e:    680a        .h      LDR      r2,[r1,#0]
+        0x00000340:    4302        .C      ORRS     r2,r2,r0
+        0x00000342:    600a        .`      STR      r2,[r1,#0]
+        0x00000344:    4770        pG      BX       lr
+    $d
+        0x00000346:    0000        ..      DCW    0
+        0x00000348:    50000200    ...P    DCD    1342177792
+    $t
+    i.CLK_GetHCLKFreq
+    CLK_GetHCLKFreq
+        0x0000034c:    b510        ..      PUSH     {r4,lr}
+        0x0000034e:    f000fa5f    .._.    BL       SystemCoreClockUpdate ; 0x810
+        0x00000352:    4801        .H      LDR      r0,[pc,#4] ; [0x358] = 0x20000000
+        0x00000354:    6800        .h      LDR      r0,[r0,#0]
+        0x00000356:    bd10        ..      POP      {r4,pc}
+    $d
+        0x00000358:    20000000    ...     DCD    536870912
+    $t
+    i.CLK_GetPLLClockFreq
+    CLK_GetPLLClockFreq
+        0x0000035c:    b508        ..      PUSH     {r3,lr}
+        0x0000035e:    a011        ..      ADR      r0,{pc}+0x46 ; 0x3a4
+        0x00000360:    6800        .h      LDR      r0,[r0,#0]
+        0x00000362:    9000        ..      STR      r0,[sp,#0]
+        0x00000364:    4810        .H      LDR      r0,[pc,#64] ; [0x3a8] = 0x50000200
+        0x00000366:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x00000368:    1300        ..      ASRS     r0,r0,#12
+        0x0000036a:    4201        .B      TST      r1,r0
+        0x0000036c:    d001        ..      BEQ      0x372 ; CLK_GetPLLClockFreq + 22
+        0x0000036e:    2000        .       MOVS     r0,#0
+        0x00000370:    bd08        ..      POP      {r3,pc}
+        0x00000372:    0308        ..      LSLS     r0,r1,#12
+        0x00000374:    d501        ..      BPL      0x37a ; CLK_GetPLLClockFreq + 30
+        0x00000376:    480d        .H      LDR      r0,[pc,#52] ; [0x3ac] = 0x1518000
+        0x00000378:    e000        ..      B        0x37c ; CLK_GetPLLClockFreq + 32
+        0x0000037a:    480d        .H      LDR      r0,[pc,#52] ; [0x3b0] = 0xb71b00
+        0x0000037c:    038a        ..      LSLS     r2,r1,#14
+        0x0000037e:    d4f7        ..      BMI      0x370 ; CLK_GetPLLClockFreq + 20
+        0x00000380:    040a        ..      LSLS     r2,r1,#16
+        0x00000382:    0f92        ..      LSRS     r2,r2,#30
+        0x00000384:    466b        kF      MOV      r3,sp
+        0x00000386:    5c9b        .\      LDRB     r3,[r3,r2]
+        0x00000388:    05ca        ..      LSLS     r2,r1,#23
+        0x0000038a:    0489        ..      LSLS     r1,r1,#18
+        0x0000038c:    0dd2        ..      LSRS     r2,r2,#23
+        0x0000038e:    0ec9        ..      LSRS     r1,r1,#27
+        0x00000390:    1c92        ..      ADDS     r2,r2,#2
+        0x00000392:    1c89        ..      ADDS     r1,r1,#2
+        0x00000394:    0880        ..      LSRS     r0,r0,#2
+        0x00000396:    4359        YC      MULS     r1,r3,r1
+        0x00000398:    4350        PC      MULS     r0,r2,r0
+        0x0000039a:    f7fffec1    ....    BL       __aeabi_uidiv ; 0x120
+        0x0000039e:    0080        ..      LSLS     r0,r0,#2
+        0x000003a0:    bd08        ..      POP      {r3,pc}
+    $d
+        0x000003a2:    0000        ..      DCW    0
+        0x000003a4:    04020201    ....    DCD    67240449
+        0x000003a8:    50000200    ...P    DCD    1342177792
+        0x000003ac:    01518000    ..Q.    DCD    22118400
+        0x000003b0:    00b71b00    ....    DCD    12000000
+    $t
+    i.CLK_GetPLLClockFreq
+    CLK_GetPLLClockFreq
+        0x000003b4:    b508        ..      PUSH     {r3,lr}
+        0x000003b6:    a011        ..      ADR      r0,{pc}+0x46 ; 0x3fc
+        0x000003b8:    6800        .h      LDR      r0,[r0,#0]
+        0x000003ba:    9000        ..      STR      r0,[sp,#0]
+        0x000003bc:    4810        .H      LDR      r0,[pc,#64] ; [0x400] = 0x50000200
+        0x000003be:    6a01        .j      LDR      r1,[r0,#0x20]
+        0x000003c0:    1300        ..      ASRS     r0,r0,#12
+        0x000003c2:    4201        .B      TST      r1,r0
+        0x000003c4:    d001        ..      BEQ      0x3ca ; CLK_GetPLLClockFreq + 22
+        0x000003c6:    2000        .       MOVS     r0,#0
+        0x000003c8:    bd08        ..      POP      {r3,pc}
+        0x000003ca:    0308        ..      LSLS     r0,r1,#12
+        0x000003cc:    d501        ..      BPL      0x3d2 ; CLK_GetPLLClockFreq + 30
+        0x000003ce:    480d        .H      LDR      r0,[pc,#52] ; [0x404] = 0x1518000
+        0x000003d0:    e000        ..      B        0x3d4 ; CLK_GetPLLClockFreq + 32
+        0x000003d2:    480d        .H      LDR      r0,[pc,#52] ; [0x408] = 0xb71b00
+        0x000003d4:    038a        ..      LSLS     r2,r1,#14
+        0x000003d6:    d4f7        ..      BMI      0x3c8 ; CLK_GetPLLClockFreq + 20
+        0x000003d8:    040a        ..      LSLS     r2,r1,#16
+        0x000003da:    0f92        ..      LSRS     r2,r2,#30
+        0x000003dc:    466b        kF      MOV      r3,sp
+        0x000003de:    5c9b        .\      LDRB     r3,[r3,r2]
+        0x000003e0:    05ca        ..      LSLS     r2,r1,#23
+        0x000003e2:    0489        ..      LSLS     r1,r1,#18
+        0x000003e4:    0dd2        ..      LSRS     r2,r2,#23
+        0x000003e6:    0ec9        ..      LSRS     r1,r1,#27
+        0x000003e8:    1c92        ..      ADDS     r2,r2,#2
+        0x000003ea:    1c89        ..      ADDS     r1,r1,#2
+        0x000003ec:    0880        ..      LSRS     r0,r0,#2
+        0x000003ee:    4359        YC      MULS     r1,r3,r1
+        0x000003f0:    4350        PC      MULS     r0,r2,r0
+        0x000003f2:    f7fffe95    ....    BL       __aeabi_uidiv ; 0x120
+        0x000003f6:    0080        ..      LSLS     r0,r0,#2
+        0x000003f8:    bd08        ..      POP      {r3,pc}
+    $d
+        0x000003fa:    0000        ..      DCW    0
+        0x000003fc:    04020201    ....    DCD    67240449
+        0x00000400:    50000200    ...P    DCD    1342177792
+        0x00000404:    01518000    ..Q.    DCD    22118400
+        0x00000408:    00b71b00    ....    DCD    12000000
+    $t
+    i.CLK_SetCoreClock
+    CLK_SetCoreClock
+        0x0000040c:    b5f8        ..      PUSH     {r3-r7,lr}
+        0x0000040e:    4c1b        .L      LDR      r4,[pc,#108] ; [0x47c] = 0x50000200
+        0x00000410:    68e5        .h      LDR      r5,[r4,#0xc]
+        0x00000412:    2110        .!      MOVS     r1,#0x10
+        0x00000414:    400d        .@      ANDS     r5,r5,r1
+        0x00000416:    491a        .I      LDR      r1,[pc,#104] ; [0x480] = 0x2faf080
+        0x00000418:    4288        .B      CMP      r0,r1
+        0x0000041a:    d802        ..      BHI      0x422 ; CLK_SetCoreClock + 22
+        0x0000041c:    1049        I.      ASRS     r1,r1,#1
+        0x0000041e:    4288        .B      CMP      r0,r1
+        0x00000420:    d200        ..      BCS      0x424 ; CLK_SetCoreClock + 24
+        0x00000422:    4608        .F      MOV      r0,r1
+        0x00000424:    6821        !h      LDR      r1,[r4,#0]
+        0x00000426:    2604        .&      MOVS     r6,#4
+        0x00000428:    4331        1C      ORRS     r1,r1,r6
+        0x0000042a:    6021        !`      STR      r1,[r4,#0]
+        0x0000042c:    68e1        .h      LDR      r1,[r4,#0xc]
+        0x0000042e:    06c9        ..      LSLS     r1,r1,#27
+        0x00000430:    d5fc        ..      BPL      0x42c ; CLK_SetCoreClock + 32
+        0x00000432:    6921        !i      LDR      r1,[r4,#0x10]
+        0x00000434:    2207        ."      MOVS     r2,#7
+        0x00000436:    4311        .C      ORRS     r1,r1,r2
+        0x00000438:    6121        !a      STR      r1,[r4,#0x10]
+        0x0000043a:    6a21        !j      LDR      r1,[r4,#0x20]
+        0x0000043c:    2201        ."      MOVS     r2,#1
+        0x0000043e:    0412        ..      LSLS     r2,r2,#16
+        0x00000440:    4311        .C      ORRS     r1,r1,r2
+        0x00000442:    6221        !b      STR      r1,[r4,#0x20]
+        0x00000444:    68e1        .h      LDR      r1,[r4,#0xc]
+        0x00000446:    07c9        ..      LSLS     r1,r1,#31
+        0x00000448:    4601        .F      MOV      r1,r0
+        0x0000044a:    d004        ..      BEQ      0x456 ; CLK_SetCoreClock + 74
+        0x0000044c:    2000        .       MOVS     r0,#0
+        0x0000044e:    f7fffea9    ....    BL       CLK_EnablePLL ; 0x1a4
+        0x00000452:    4607        .F      MOV      r7,r0
+        0x00000454:    e007        ..      B        0x466 ; CLK_SetCoreClock + 90
+        0x00000456:    2001        .       MOVS     r0,#1
+        0x00000458:    04c0        ..      LSLS     r0,r0,#19
+        0x0000045a:    f7fffea3    ....    BL       CLK_EnablePLL ; 0x1a4
+        0x0000045e:    68e5        .h      LDR      r5,[r4,#0xc]
+        0x00000460:    4607        .F      MOV      r7,r0
+        0x00000462:    2010        .       MOVS     r0,#0x10
+        0x00000464:    4005        .@      ANDS     r5,r5,r0
+        0x00000466:    2100        .!      MOVS     r1,#0
+        0x00000468:    2002        .       MOVS     r0,#2
+        0x0000046a:    f000f80b    ....    BL       CLK_SetHCLK ; 0x484
+        0x0000046e:    2d00        .-      CMP      r5,#0
+        0x00000470:    d102        ..      BNE      0x478 ; CLK_SetCoreClock + 108
+        0x00000472:    6820         h      LDR      r0,[r4,#0]
+        0x00000474:    43b0        .C      BICS     r0,r0,r6
+        0x00000476:    6020         `      STR      r0,[r4,#0]
+        0x00000478:    4638        8F      MOV      r0,r7
+        0x0000047a:    bdf8        ..      POP      {r3-r7,pc}
+    $d
+        0x0000047c:    50000200    ...P    DCD    1342177792
+        0x00000480:    02faf080    ....    DCD    50000000
+    $t
+    i.CLK_SetHCLK
+    CLK_SetHCLK
+        0x00000484:    b570        p.      PUSH     {r4-r6,lr}
+        0x00000486:    4c10        .L      LDR      r4,[pc,#64] ; [0x4c8] = 0x50000200
+        0x00000488:    68e5        .h      LDR      r5,[r4,#0xc]
+        0x0000048a:    2610        .&      MOVS     r6,#0x10
+        0x0000048c:    6822        "h      LDR      r2,[r4,#0]
+        0x0000048e:    4035        5@      ANDS     r5,r5,r6
+        0x00000490:    2304        .#      MOVS     r3,#4
+        0x00000492:    431a        .C      ORRS     r2,r2,r3
+        0x00000494:    6022        "`      STR      r2,[r4,#0]
+        0x00000496:    68e2        .h      LDR      r2,[r4,#0xc]
+        0x00000498:    06d2        ..      LSLS     r2,r2,#27
+        0x0000049a:    d5fc        ..      BPL      0x496 ; CLK_SetHCLK + 18
+        0x0000049c:    6922        "i      LDR      r2,[r4,#0x10]
+        0x0000049e:    2307        .#      MOVS     r3,#7
+        0x000004a0:    431a        .C      ORRS     r2,r2,r3
+        0x000004a2:    6122        "a      STR      r2,[r4,#0x10]
+        0x000004a4:    69a2        .i      LDR      r2,[r4,#0x18]
+        0x000004a6:    0912        ..      LSRS     r2,r2,#4
+        0x000004a8:    0112        ..      LSLS     r2,r2,#4
+        0x000004aa:    430a        .C      ORRS     r2,r2,r1
+        0x000004ac:    61a2        .a      STR      r2,[r4,#0x18]
+        0x000004ae:    6921        !i      LDR      r1,[r4,#0x10]
+        0x000004b0:    4399        .C      BICS     r1,r1,r3
+        0x000004b2:    4301        .C      ORRS     r1,r1,r0
+        0x000004b4:    6121        !a      STR      r1,[r4,#0x10]
+        0x000004b6:    f000f9ab    ....    BL       SystemCoreClockUpdate ; 0x810
+        0x000004ba:    2d00        .-      CMP      r5,#0
+        0x000004bc:    d102        ..      BNE      0x4c4 ; CLK_SetHCLK + 64
+        0x000004be:    6820         h      LDR      r0,[r4,#0]
+        0x000004c0:    43b0        .C      BICS     r0,r0,r6
+        0x000004c2:    6020         `      STR      r0,[r4,#0]
+        0x000004c4:    bd70        p.      POP      {r4-r6,pc}
+    $d
+        0x000004c6:    0000        ..      DCW    0
+        0x000004c8:    50000200    ...P    DCD    1342177792
+    $t
+    i.CLK_SetModuleClock
+    CLK_SetModuleClock
+        0x000004cc:    b5f0        ..      PUSH     {r4-r7,lr}
+        0x000004ce:    4b2c        ,K      LDR      r3,[pc,#176] ; [0x580] = 0x1090
+        0x000004d0:    b086        ..      SUB      sp,sp,#0x18
+        0x000004d2:    461c        .F      MOV      r4,r3
+        0x000004d4:    3408        .4      ADDS     r4,r4,#8
+        0x000004d6:    ccf0        ..      LDM      r4,{r4-r7}
+        0x000004d8:    9703        ..      STR      r7,[sp,#0xc]
+        0x000004da:    466f        oF      MOV      r7,sp
+        0x000004dc:    c770        p.      STM      r7!,{r4-r6}
+        0x000004de:    cb18        ..      LDM      r3,{r3,r4}
+        0x000004e0:    9304        ..      STR      r3,[sp,#0x10]
+        0x000004e2:    0e43        C.      LSRS     r3,r0,#25
+        0x000004e4:    9405        ..      STR      r4,[sp,#0x14]
+        0x000004e6:    075b        [.      LSLS     r3,r3,#29
+        0x000004e8:    d034        4.      BEQ      0x554 ; CLK_SetModuleClock + 136
+        0x000004ea:    0083        ..      LSLS     r3,r0,#2
+        0x000004ec:    0f9b        ..      LSRS     r3,r3,#30
+        0x000004ee:    009b        ..      LSLS     r3,r3,#2
+        0x000004f0:    466c        lF      MOV      r4,sp
+        0x000004f2:    58e3        .X      LDR      r3,[r4,r3]
+        0x000004f4:    4c23        #L      LDR      r4,[pc,#140] ; [0x584] = 0x50000210
+        0x000004f6:    191b        ..      ADDS     r3,r3,r4
+        0x000004f8:    0104        ..      LSLS     r4,r0,#4
+        0x000004fa:    0f65        e.      LSRS     r5,r4,#29
+        0x000004fc:    01c4        ..      LSLS     r4,r0,#7
+        0x000004fe:    0ee4        ..      LSRS     r4,r4,#27
+        0x00000500:    40a5        .@      LSLS     r5,r5,r4
+        0x00000502:    681c        .h      LDR      r4,[r3,#0]
+        0x00000504:    43ac        .C      BICS     r4,r4,r5
+        0x00000506:    430c        .C      ORRS     r4,r4,r1
+        0x00000508:    601c        .`      STR      r4,[r3,#0]
+        0x0000050a:    4b1e        .K      LDR      r3,[pc,#120] ; [0x584] = 0x50000210
+        0x0000050c:    4c1e        .L      LDR      r4,[pc,#120] ; [0x588] = 0x57c00014
+        0x0000050e:    3b10        .;      SUBS     r3,r3,#0x10
+        0x00000510:    42a0        .B      CMP      r0,r4
+        0x00000512:    d107        ..      BNE      0x524 ; CLK_SetModuleClock + 88
+        0x00000514:    69dd        .i      LDR      r5,[r3,#0x1c]
+        0x00000516:    24ff        .$      MOVS     r4,#0xff
+        0x00000518:    3401        .4      ADDS     r4,#1
+        0x0000051a:    43a5        .C      BICS     r5,r5,r4
+        0x0000051c:    4021        !@      ANDS     r1,r1,r4
+        0x0000051e:    430d        .C      ORRS     r5,r5,r1
+        0x00000520:    61dd        .a      STR      r5,[r3,#0x1c]
+        0x00000522:    e017        ..      B        0x554 ; CLK_SetModuleClock + 136
+        0x00000524:    4c19        .L      LDR      r4,[pc,#100] ; [0x58c] = 0x57e00015
+        0x00000526:    42a0        .B      CMP      r0,r4
+        0x00000528:    d103        ..      BNE      0x532 ; CLK_SetModuleClock + 102
+        0x0000052a:    69dc        .i      LDR      r4,[r3,#0x1c]
+        0x0000052c:    2501        .%      MOVS     r5,#1
+        0x0000052e:    026d        m.      LSLS     r5,r5,#9
+        0x00000530:    e00c        ..      B        0x54c ; CLK_SetModuleClock + 128
+        0x00000532:    4c17        .L      LDR      r4,[pc,#92] ; [0x590] = 0x66400016
+        0x00000534:    42a0        .B      CMP      r0,r4
+        0x00000536:    d103        ..      BNE      0x540 ; CLK_SetModuleClock + 116
+        0x00000538:    69dc        .i      LDR      r4,[r3,#0x1c]
+        0x0000053a:    2501        .%      MOVS     r5,#1
+        0x0000053c:    02ad        ..      LSLS     r5,r5,#10
+        0x0000053e:    e005        ..      B        0x54c ; CLK_SetModuleClock + 128
+        0x00000540:    4c14        .L      LDR      r4,[pc,#80] ; [0x594] = 0x66600017
+        0x00000542:    42a0        .B      CMP      r0,r4
+        0x00000544:    d106        ..      BNE      0x554 ; CLK_SetModuleClock + 136
+        0x00000546:    69dc        .i      LDR      r4,[r3,#0x1c]
+        0x00000548:    2501        .%      MOVS     r5,#1
+        0x0000054a:    02ed        ..      LSLS     r5,r5,#11
+        0x0000054c:    43ac        .C      BICS     r4,r4,r5
+        0x0000054e:    4029        )@      ANDS     r1,r1,r5
+        0x00000550:    430c        .C      ORRS     r4,r4,r1
+        0x00000552:    61dc        .a      STR      r4,[r3,#0x1c]
+        0x00000554:    0a83        ..      LSRS     r3,r0,#10
+        0x00000556:    0619        ..      LSLS     r1,r3,#24
+        0x00000558:    0e09        ..      LSRS     r1,r1,#24
+        0x0000055a:    d00f        ..      BEQ      0x57c ; CLK_SetModuleClock + 176
+        0x0000055c:    0301        ..      LSLS     r1,r0,#12
+        0x0000055e:    0f89        ..      LSRS     r1,r1,#30
+        0x00000560:    0089        ..      LSLS     r1,r1,#2
+        0x00000562:    ac04        ..      ADD      r4,sp,#0x10
+        0x00000564:    5861        aX      LDR      r1,[r4,r1]
+        0x00000566:    4c07        .L      LDR      r4,[pc,#28] ; [0x584] = 0x50000210
+        0x00000568:    0580        ..      LSLS     r0,r0,#22
+        0x0000056a:    3408        .4      ADDS     r4,r4,#8
+        0x0000056c:    1909        ..      ADDS     r1,r1,r4
+        0x0000056e:    b2db        ..      UXTB     r3,r3
+        0x00000570:    0ec0        ..      LSRS     r0,r0,#27
+        0x00000572:    4083        .@      LSLS     r3,r3,r0
+        0x00000574:    6808        .h      LDR      r0,[r1,#0]
+        0x00000576:    4398        .C      BICS     r0,r0,r3
+        0x00000578:    4310        .C      ORRS     r0,r0,r2
+        0x0000057a:    6008        .`      STR      r0,[r1,#0]
+        0x0000057c:    b006        ..      ADD      sp,sp,#0x18
+        0x0000057e:    bdf0        ..      POP      {r4-r7,pc}
+    $d
+        0x00000580:    00001090    ....    DCD    4240
+        0x00000584:    50000210    ...P    DCD    1342177808
+        0x00000588:    57c00014    ...W    DCD    1472200724
+        0x0000058c:    57e00015    ...W    DCD    1474297877
+        0x00000590:    66400016    ..@f    DCD    1715470358
+        0x00000594:    66600017    ..`f    DCD    1717567511
+    $t
+    i.CLK_WaitClockReady
+    CLK_WaitClockReady
+        0x00000598:    b510        ..      PUSH     {r4,lr}
+        0x0000059a:    4604        .F      MOV      r4,r0
+        0x0000059c:    4907        .I      LDR      r1,[pc,#28] ; [0x5bc] = 0x124f80
+        0x0000059e:    4a08        .J      LDR      r2,[pc,#32] ; [0x5c0] = 0x50000200
+        0x000005a0:    e005        ..      B        0x5ae ; CLK_WaitClockReady + 22
+        0x000005a2:    460b        .F      MOV      r3,r1
+        0x000005a4:    1e49        I.      SUBS     r1,r1,#1
+        0x000005a6:    2b00        .+      CMP      r3,#0
+        0x000005a8:    dc01        ..      BGT      0x5ae ; CLK_WaitClockReady + 22
+        0x000005aa:    2000        .       MOVS     r0,#0
+        0x000005ac:    bd10        ..      POP      {r4,pc}
+        0x000005ae:    68d3        .h      LDR      r3,[r2,#0xc]
+        0x000005b0:    4620         F      MOV      r0,r4
+        0x000005b2:    4398        .C      BICS     r0,r0,r3
+        0x000005b4:    d1f5        ..      BNE      0x5a2 ; CLK_WaitClockReady + 10
+        0x000005b6:    2001        .       MOVS     r0,#1
+        0x000005b8:    bd10        ..      POP      {r4,pc}
+    $d
+        0x000005ba:    0000        ..      DCW    0
+        0x000005bc:    00124f80    .O..    DCD    1200000
+        0x000005c0:    50000200    ...P    DCD    1342177792
+    $t
+    i.Init_UART
+    Init_UART
+        0x000005c4:    b510        ..      PUSH     {r4,lr}
+        0x000005c6:    4c07        .L      LDR      r4,[pc,#28] ; [0x5e4] = 0x40050000
+        0x000005c8:    21e1        .!      MOVS     r1,#0xe1
+        0x000005ca:    0249        I.      LSLS     r1,r1,#9
+        0x000005cc:    4620         F      MOV      r0,r4
+        0x000005ce:    f000f9b5    ....    BL       UART_Open ; 0x93c
+        0x000005d2:    6861        ah      LDR      r1,[r4,#4]
+        0x000005d4:    2201        ."      MOVS     r2,#1
+        0x000005d6:    4311        .C      ORRS     r1,r1,r2
+        0x000005d8:    6061        a`      STR      r1,[r4,#4]
+        0x000005da:    4903        .I      LDR      r1,[pc,#12] ; [0x5e8] = 0xe000e100
+        0x000005dc:    0310        ..      LSLS     r0,r2,#12
+        0x000005de:    6008        .`      STR      r0,[r1,#0]
+        0x000005e0:    bd10        ..      POP      {r4,pc}
+    $d
+        0x000005e2:    0000        ..      DCW    0
+        0x000005e4:    40050000    ...@    DCD    1074069504
+        0x000005e8:    e000e100    ....    DCD    3758153984
+    $t
+    i.SPI_DisableAutoSS
+    SPI_DisableAutoSS
+        0x000005ec:    6881        .h      LDR      r1,[r0,#8]
+        0x000005ee:    220b        ."      MOVS     r2,#0xb
+        0x000005f0:    4391        .C      BICS     r1,r1,r2
+        0x000005f2:    6081        .`      STR      r1,[r0,#8]
+        0x000005f4:    4770        pG      BX       lr
+        0x000005f6:    0000        ..      MOVS     r0,r0
+    i.SPI_Open
+    SPI_Open
+        0x000005f8:    b5f8        ..      PUSH     {r3-r7,lr}
+        0x000005fa:    4604        .F      MOV      r4,r0
+        0x000005fc:    460d        .F      MOV      r5,r1
+        0x000005fe:    2b20         +      CMP      r3,#0x20
+        0x00000600:    d100        ..      BNE      0x604 ; SPI_Open + 12
+        0x00000602:    2300        .#      MOVS     r3,#0
+        0x00000604:    00d8        ..      LSLS     r0,r3,#3
+        0x00000606:    4328        (C      ORRS     r0,r0,r5
+        0x00000608:    4310        .C      ORRS     r0,r0,r2
+        0x0000060a:    6020         `      STR      r0,[r4,#0]
+        0x0000060c:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x0000060e:    2101        .!      MOVS     r1,#1
+        0x00000610:    07c9        ..      LSLS     r1,r1,#31
+        0x00000612:    4308        .C      ORRS     r0,r0,r1
+        0x00000614:    63e0        .c      STR      r0,[r4,#0x3c]
+        0x00000616:    f7fffe99    ....    BL       CLK_GetHCLKFreq ; 0x34c
+        0x0000061a:    2100        .!      MOVS     r1,#0
+        0x0000061c:    4a4c        LJ      LDR      r2,[pc,#304] ; [0x750] = 0x40030000
+        0x0000061e:    4e4d        MN      LDR      r6,[pc,#308] ; [0x754] = 0x50000200
+        0x00000620:    4607        .F      MOV      r7,r0
+        0x00000622:    2d00        .-      CMP      r5,#0
+        0x00000624:    d007        ..      BEQ      0x636 ; SPI_Open + 62
+        0x00000626:    2010        .       MOVS     r0,#0x10
+        0x00000628:    60a0        .`      STR      r0,[r4,#8]
+        0x0000062a:    4294        .B      CMP      r4,r2
+        0x0000062c:    d17e        ~.      BNE      0x72c ; SPI_Open + 308
+        0x0000062e:    6972        ri      LDR      r2,[r6,#0x14]
+        0x00000630:    4302        .C      ORRS     r2,r2,r0
+        0x00000632:    6172        ra      STR      r2,[r6,#0x14]
+        0x00000634:    e089        ..      B        0x74a ; SPI_Open + 338
+        0x00000636:    2000        .       MOVS     r0,#0
+        0x00000638:    60a0        .`      STR      r0,[r4,#8]
+        0x0000063a:    4845        EH      LDR      r0,[pc,#276] ; [0x750] = 0x40030000
+        0x0000063c:    4284        .B      CMP      r4,r0
+        0x0000063e:    d102        ..      BNE      0x646 ; SPI_Open + 78
+        0x00000640:    6970        pi      LDR      r0,[r6,#0x14]
+        0x00000642:    06c0        ..      LSLS     r0,r0,#27
+        0x00000644:    e004        ..      B        0x650 ; SPI_Open + 88
+        0x00000646:    4844        DH      LDR      r0,[pc,#272] ; [0x758] = 0x40034000
+        0x00000648:    4284        .B      CMP      r4,r0
+        0x0000064a:    d105        ..      BNE      0x658 ; SPI_Open + 96
+        0x0000064c:    6970        pi      LDR      r0,[r6,#0x14]
+        0x0000064e:    0680        ..      LSLS     r0,r0,#26
+        0x00000650:    2800        .(      CMP      r0,#0
+        0x00000652:    da09        ..      BGE      0x668 ; SPI_Open + 112
+        0x00000654:    463d        =F      MOV      r5,r7
+        0x00000656:    e00a        ..      B        0x66e ; SPI_Open + 118
+        0x00000658:    4840        @H      LDR      r0,[pc,#256] ; [0x75c] = 0x40130000
+        0x0000065a:    4284        .B      CMP      r4,r0
+        0x0000065c:    6970        pi      LDR      r0,[r6,#0x14]
+        0x0000065e:    d101        ..      BNE      0x664 ; SPI_Open + 108
+        0x00000660:    0640        @.      LSLS     r0,r0,#25
+        0x00000662:    e7f5        ..      B        0x650 ; SPI_Open + 88
+        0x00000664:    0600        ..      LSLS     r0,r0,#24
+        0x00000666:    e7f3        ..      B        0x650 ; SPI_Open + 88
+        0x00000668:    f7fffe78    ..x.    BL       CLK_GetPLLClockFreq ; 0x35c
+        0x0000066c:    4605        .F      MOV      r5,r0
+        0x0000066e:    9806        ..      LDR      r0,[sp,#0x18]
+        0x00000670:    42b8        .B      CMP      r0,r7
+        0x00000672:    d317        ..      BCC      0x6a4 ; SPI_Open + 172
+        0x00000674:    4836        6H      LDR      r0,[pc,#216] ; [0x750] = 0x40030000
+        0x00000676:    4284        .B      CMP      r4,r0
+        0x00000678:    d102        ..      BNE      0x680 ; SPI_Open + 136
+        0x0000067a:    6970        pi      LDR      r0,[r6,#0x14]
+        0x0000067c:    2110        .!      MOVS     r1,#0x10
+        0x0000067e:    e00c        ..      B        0x69a ; SPI_Open + 162
+        0x00000680:    4835        5H      LDR      r0,[pc,#212] ; [0x758] = 0x40034000
+        0x00000682:    4284        .B      CMP      r4,r0
+        0x00000684:    d102        ..      BNE      0x68c ; SPI_Open + 148
+        0x00000686:    6970        pi      LDR      r0,[r6,#0x14]
+        0x00000688:    2120         !      MOVS     r1,#0x20
+        0x0000068a:    e006        ..      B        0x69a ; SPI_Open + 162
+        0x0000068c:    4833        3H      LDR      r0,[pc,#204] ; [0x75c] = 0x40130000
+        0x0000068e:    4284        .B      CMP      r4,r0
+        0x00000690:    6970        pi      LDR      r0,[r6,#0x14]
+        0x00000692:    d101        ..      BNE      0x698 ; SPI_Open + 160
+        0x00000694:    2140        @!      MOVS     r1,#0x40
+        0x00000696:    e000        ..      B        0x69a ; SPI_Open + 162
+        0x00000698:    2180        .!      MOVS     r1,#0x80
+        0x0000069a:    4308        .C      ORRS     r0,r0,r1
+        0x0000069c:    6170        pa      STR      r0,[r6,#0x14]
+        0x0000069e:    2000        .       MOVS     r0,#0
+        0x000006a0:    6060        ``      STR      r0,[r4,#4]
+        0x000006a2:    e053        S.      B        0x74c ; SPI_Open + 340
+        0x000006a4:    42a8        .B      CMP      r0,r5
+        0x000006a6:    d303        ..      BCC      0x6b0 ; SPI_Open + 184
+        0x000006a8:    2000        .       MOVS     r0,#0
+        0x000006aa:    6060        ``      STR      r0,[r4,#4]
+        0x000006ac:    4628        (F      MOV      r0,r5
+        0x000006ae:    bdf8        ..      POP      {r3-r7,pc}
+        0x000006b0:    2800        .(      CMP      r0,#0
+        0x000006b2:    d029        ).      BEQ      0x708 ; SPI_Open + 272
+        0x000006b4:    4628        (F      MOV      r0,r5
+        0x000006b6:    210a        .!      MOVS     r1,#0xa
+        0x000006b8:    4348        HC      MULS     r0,r1,r0
+        0x000006ba:    4606        .F      MOV      r6,r0
+        0x000006bc:    9906        ..      LDR      r1,[sp,#0x18]
+        0x000006be:    f7fffd2f    ../.    BL       __aeabi_uidiv ; 0x120
+        0x000006c2:    1d40        @.      ADDS     r0,r0,#5
+        0x000006c4:    210a        .!      MOVS     r1,#0xa
+        0x000006c6:    f7fffd2b    ..+.    BL       __aeabi_uidiv ; 0x120
+        0x000006ca:    1e40        @.      SUBS     r0,r0,#1
+        0x000006cc:    28ff        .(      CMP      r0,#0xff
+        0x000006ce:    d926        &.      BLS      0x71e ; SPI_Open + 294
+        0x000006d0:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x000006d2:    0040        @.      LSLS     r0,r0,#1
+        0x000006d4:    0840        @.      LSRS     r0,r0,#1
+        0x000006d6:    63e0        .c      STR      r0,[r4,#0x3c]
+        0x000006d8:    9806        ..      LDR      r0,[sp,#0x18]
+        0x000006da:    0041        A.      LSLS     r1,r0,#1
+        0x000006dc:    4630        0F      MOV      r0,r6
+        0x000006de:    f7fffd1f    ....    BL       __aeabi_uidiv ; 0x120
+        0x000006e2:    1d40        @.      ADDS     r0,r0,#5
+        0x000006e4:    210a        .!      MOVS     r1,#0xa
+        0x000006e6:    f7fffd1b    ....    BL       __aeabi_uidiv ; 0x120
+        0x000006ea:    1e40        @.      SUBS     r0,r0,#1
+        0x000006ec:    28ff        .(      CMP      r0,#0xff
+        0x000006ee:    d900        ..      BLS      0x6f2 ; SPI_Open + 250
+        0x000006f0:    20ff        .       MOVS     r0,#0xff
+        0x000006f2:    6861        ah      LDR      r1,[r4,#4]
+        0x000006f4:    0a09        ..      LSRS     r1,r1,#8
+        0x000006f6:    0209        ..      LSLS     r1,r1,#8
+        0x000006f8:    4301        .C      ORRS     r1,r1,r0
+        0x000006fa:    6061        a`      STR      r1,[r4,#4]
+        0x000006fc:    0041        A.      LSLS     r1,r0,#1
+        0x000006fe:    1c89        ..      ADDS     r1,r1,#2
+        0x00000700:    4628        (F      MOV      r0,r5
+        0x00000702:    f7fffd0d    ....    BL       __aeabi_uidiv ; 0x120
+        0x00000706:    bdf8        ..      POP      {r3-r7,pc}
+        0x00000708:    6be0        .k      LDR      r0,[r4,#0x3c]
+        0x0000070a:    0040        @.      LSLS     r0,r0,#1
+        0x0000070c:    0840        @.      LSRS     r0,r0,#1
+        0x0000070e:    63e0        .c      STR      r0,[r4,#0x3c]
+        0x00000710:    6860        `h      LDR      r0,[r4,#4]
+        0x00000712:    21ff        .!      MOVS     r1,#0xff
+        0x00000714:    4308        .C      ORRS     r0,r0,r1
+        0x00000716:    6060        ``      STR      r0,[r4,#4]
+        0x00000718:    0a68        h.      LSRS     r0,r5,#9
+        0x0000071a:    bdf8        ..      POP      {r3-r7,pc}
+        0x0000071c:    e006        ..      B        0x72c ; SPI_Open + 308
+        0x0000071e:    6861        ah      LDR      r1,[r4,#4]
+        0x00000720:    0a09        ..      LSRS     r1,r1,#8
+        0x00000722:    0209        ..      LSLS     r1,r1,#8
+        0x00000724:    4301        .C      ORRS     r1,r1,r0
+        0x00000726:    6061        a`      STR      r1,[r4,#4]
+        0x00000728:    1c41        A.      ADDS     r1,r0,#1
+        0x0000072a:    e7e9        ..      B        0x700 ; SPI_Open + 264
+        0x0000072c:    480a        .H      LDR      r0,[pc,#40] ; [0x758] = 0x40034000
+        0x0000072e:    4284        .B      CMP      r4,r0
+        0x00000730:    d102        ..      BNE      0x738 ; SPI_Open + 320
+        0x00000732:    6970        pi      LDR      r0,[r6,#0x14]
+        0x00000734:    2220         "      MOVS     r2,#0x20
+        0x00000736:    e006        ..      B        0x746 ; SPI_Open + 334
+        0x00000738:    4808        .H      LDR      r0,[pc,#32] ; [0x75c] = 0x40130000
+        0x0000073a:    4284        .B      CMP      r4,r0
+        0x0000073c:    6970        pi      LDR      r0,[r6,#0x14]
+        0x0000073e:    d101        ..      BNE      0x744 ; SPI_Open + 332
+        0x00000740:    2240        @"      MOVS     r2,#0x40
+        0x00000742:    e000        ..      B        0x746 ; SPI_Open + 334
+        0x00000744:    2280        ."      MOVS     r2,#0x80
+        0x00000746:    4310        .C      ORRS     r0,r0,r2
+        0x00000748:    6170        pa      STR      r0,[r6,#0x14]
+        0x0000074a:    6061        a`      STR      r1,[r4,#4]
+        0x0000074c:    4638        8F      MOV      r0,r7
+        0x0000074e:    e7e4        ..      B        0x71a ; SPI_Open + 290
+    $d
+        0x00000750:    40030000    ...@    DCD    1073938432
+        0x00000754:    50000200    ...P    DCD    1342177792
+        0x00000758:    40034000    .@.@    DCD    1073954816
+        0x0000075c:    40130000    ...@    DCD    1074987008
+    $t
+    i.SYS_Init
+    SYS_Init
+        0x00000760:    b570        p.      PUSH     {r4-r6,lr}
+        0x00000762:    2059        Y       MOVS     r0,#0x59
+        0x00000764:    2216        ."      MOVS     r2,#0x16
+        0x00000766:    4c25        %L      LDR      r4,[pc,#148] ; [0x7fc] = 0x50000100
+        0x00000768:    2188        .!      MOVS     r1,#0x88
+        0x0000076a:    e002        ..      B        0x772 ; SYS_Init + 18
+        0x0000076c:    6020         `      STR      r0,[r4,#0]
+        0x0000076e:    6022        "`      STR      r2,[r4,#0]
+        0x00000770:    6021        !`      STR      r1,[r4,#0]
+        0x00000772:    6823        #h      LDR      r3,[r4,#0]
+        0x00000774:    2b01        .+      CMP      r3,#1
+        0x00000776:    d1f9        ..      BNE      0x76c ; SYS_Init + 12
+        0x00000778:    2001        .       MOVS     r0,#1
+        0x0000077a:    f7fffddf    ....    BL       CLK_EnableXtalRC ; 0x33c
+        0x0000077e:    2001        .       MOVS     r0,#1
+        0x00000780:    f7ffff0a    ....    BL       CLK_WaitClockReady ; 0x598
+        0x00000784:    481e        .H      LDR      r0,[pc,#120] ; [0x800] = 0x2faf080
+        0x00000786:    f7fffe41    ..A.    BL       CLK_SetCoreClock ; 0x40c
+        0x0000078a:    4d1e        .M      LDR      r5,[pc,#120] ; [0x804] = 0x5e800002
+        0x0000078c:    4628        (F      MOV      r0,r5
+        0x0000078e:    f7fffcef    ....    BL       CLK_EnableModuleClock ; 0x170
+        0x00000792:    2200        ."      MOVS     r2,#0
+        0x00000794:    4611        .F      MOV      r1,r2
+        0x00000796:    4628        (F      MOV      r0,r5
+        0x00000798:    f7fffe98    ....    BL       CLK_SetModuleClock ; 0x4cc
+        0x0000079c:    4e1a        .N      LDR      r6,[pc,#104] ; [0x808] = 0x57803d10
+        0x0000079e:    4630        0F      MOV      r0,r6
+        0x000007a0:    f7fffce6    ....    BL       CLK_EnableModuleClock ; 0x170
+        0x000007a4:    2501        .%      MOVS     r5,#1
+        0x000007a6:    026d        m.      LSLS     r5,r5,#9
+        0x000007a8:    462a        *F      MOV      r2,r5
+        0x000007aa:    2100        .!      MOVS     r1,#0
+        0x000007ac:    4630        0F      MOV      r0,r6
+        0x000007ae:    f7fffe8d    ....    BL       CLK_SetModuleClock ; 0x4cc
+        0x000007b2:    4e16        .N      LDR      r6,[pc,#88] ; [0x80c] = 0x5270000f
+        0x000007b4:    4630        0F      MOV      r0,r6
+        0x000007b6:    f7fffcdb    ....    BL       CLK_EnableModuleClock ; 0x170
+        0x000007ba:    2200        ."      MOVS     r2,#0
+        0x000007bc:    2180        .!      MOVS     r1,#0x80
+        0x000007be:    4630        0F      MOV      r0,r6
+        0x000007c0:    f7fffe84    ....    BL       CLK_SetModuleClock ; 0x4cc
+        0x000007c4:    2005        .       MOVS     r0,#5
+        0x000007c6:    0700        ..      LSLS     r0,r0,#28
+        0x000007c8:    6b41        Ak      LDR      r1,[r0,#0x34]
+        0x000007ca:    2201        ."      MOVS     r2,#1
+        0x000007cc:    4311        .C      ORRS     r1,r1,r2
+        0x000007ce:    6341        Ac      STR      r1,[r0,#0x34]
+        0x000007d0:    6b41        Ak      LDR      r1,[r0,#0x34]
+        0x000007d2:    2202        ."      MOVS     r2,#2
+        0x000007d4:    4311        .C      ORRS     r1,r1,r2
+        0x000007d6:    6341        Ac      STR      r1,[r0,#0x34]
+        0x000007d8:    6bc1        .k      LDR      r1,[r0,#0x3c]
+        0x000007da:    01d2        ..      LSLS     r2,r2,#7
+        0x000007dc:    4311        .C      ORRS     r1,r1,r2
+        0x000007de:    63c1        .c      STR      r1,[r0,#0x3c]
+        0x000007e0:    6bc1        .k      LDR      r1,[r0,#0x3c]
+        0x000007e2:    4329        )C      ORRS     r1,r1,r5
+        0x000007e4:    63c1        .c      STR      r1,[r0,#0x3c]
+        0x000007e6:    6bc1        .k      LDR      r1,[r0,#0x3c]
+        0x000007e8:    0092        ..      LSLS     r2,r2,#2
+        0x000007ea:    4311        .C      ORRS     r1,r1,r2
+        0x000007ec:    63c1        .c      STR      r1,[r0,#0x3c]
+        0x000007ee:    6bc1        .k      LDR      r1,[r0,#0x3c]
+        0x000007f0:    0052        R.      LSLS     r2,r2,#1
+        0x000007f2:    4311        .C      ORRS     r1,r1,r2
+        0x000007f4:    63c1        .c      STR      r1,[r0,#0x3c]
+        0x000007f6:    2000        .       MOVS     r0,#0
+        0x000007f8:    6020         `      STR      r0,[r4,#0]
+        0x000007fa:    bd70        p.      POP      {r4-r6,pc}
+    $d
+        0x000007fc:    50000100    ...P    DCD    1342177536
+        0x00000800:    02faf080    ....    DCD    50000000
+        0x00000804:    5e800002    ...^    DCD    1585446914
+        0x00000808:    57803d10    .=.W    DCD    1468022032
+        0x0000080c:    5270000f    ..pR    DCD    1383071759
+    $t
+    i.SystemCoreClockUpdate
+    SystemCoreClockUpdate
+        0x00000810:    b538        8.      PUSH     {r3-r5,lr}
+        0x00000812:    a01d        ..      ADR      r0,{pc}+0x76 ; 0x888
+        0x00000814:    6800        .h      LDR      r0,[r0,#0]
+        0x00000816:    4c1d        .L      LDR      r4,[pc,#116] ; [0x88c] = 0x50000200
+        0x00000818:    9000        ..      STR      r0,[sp,#0]
+        0x0000081a:    6a21        !j      LDR      r1,[r4,#0x20]
+        0x0000081c:    1320         .      ASRS     r0,r4,#12
+        0x0000081e:    4201        .B      TST      r1,r0
+        0x00000820:    d001        ..      BEQ      0x826 ; SystemCoreClockUpdate + 22
+        0x00000822:    2000        .       MOVS     r0,#0
+        0x00000824:    e016        ..      B        0x854 ; SystemCoreClockUpdate + 68
+        0x00000826:    0308        ..      LSLS     r0,r1,#12
+        0x00000828:    d501        ..      BPL      0x82e ; SystemCoreClockUpdate + 30
+        0x0000082a:    4819        .H      LDR      r0,[pc,#100] ; [0x890] = 0x1518000
+        0x0000082c:    e000        ..      B        0x830 ; SystemCoreClockUpdate + 32
+        0x0000082e:    4819        .H      LDR      r0,[pc,#100] ; [0x894] = 0xb71b00
+        0x00000830:    038a        ..      LSLS     r2,r1,#14
+        0x00000832:    d40f        ..      BMI      0x854 ; SystemCoreClockUpdate + 68
+        0x00000834:    040a        ..      LSLS     r2,r1,#16
+        0x00000836:    0f92        ..      LSRS     r2,r2,#30
+        0x00000838:    466b        kF      MOV      r3,sp
+        0x0000083a:    5c9b        .\      LDRB     r3,[r3,r2]
+        0x0000083c:    05ca        ..      LSLS     r2,r1,#23
+        0x0000083e:    0489        ..      LSLS     r1,r1,#18
+        0x00000840:    0dd2        ..      LSRS     r2,r2,#23
+        0x00000842:    0ec9        ..      LSRS     r1,r1,#27
+        0x00000844:    1c92        ..      ADDS     r2,r2,#2
+        0x00000846:    1c89        ..      ADDS     r1,r1,#2
+        0x00000848:    0880        ..      LSRS     r0,r0,#2
+        0x0000084a:    4359        YC      MULS     r1,r3,r1
+        0x0000084c:    4350        PC      MULS     r0,r2,r0
+        0x0000084e:    f7fffc67    ..g.    BL       __aeabi_uidiv ; 0x120
+        0x00000852:    0080        ..      LSLS     r0,r0,#2
+        0x00000854:    4d10        .M      LDR      r5,[pc,#64] ; [0x898] = 0x20000000
+        0x00000856:    60a8        .`      STR      r0,[r5,#8]
+        0x00000858:    6921        !i      LDR      r1,[r4,#0x10]
+        0x0000085a:    0749        I.      LSLS     r1,r1,#29
+        0x0000085c:    0f49        I.      LSRS     r1,r1,#29
+        0x0000085e:    2902        .)      CMP      r1,#2
+        0x00000860:    d003        ..      BEQ      0x86a ; SystemCoreClockUpdate + 90
+        0x00000862:    0088        ..      LSLS     r0,r1,#2
+        0x00000864:    4629        )F      MOV      r1,r5
+        0x00000866:    310c        .1      ADDS     r1,r1,#0xc
+        0x00000868:    5808        .X      LDR      r0,[r1,r0]
+        0x0000086a:    69a1        .i      LDR      r1,[r4,#0x18]
+        0x0000086c:    0709        ..      LSLS     r1,r1,#28
+        0x0000086e:    0f09        ..      LSRS     r1,r1,#28
+        0x00000870:    1c49        I.      ADDS     r1,r1,#1
+        0x00000872:    f7fffc55    ..U.    BL       __aeabi_uidiv ; 0x120
+        0x00000876:    4909        .I      LDR      r1,[pc,#36] ; [0x89c] = 0xf4240
+        0x00000878:    6028        (`      STR      r0,[r5,#0]
+        0x0000087a:    104a        J.      ASRS     r2,r1,#1
+        0x0000087c:    1880        ..      ADDS     r0,r0,r2
+        0x0000087e:    f7fffc4f    ..O.    BL       __aeabi_uidiv ; 0x120
+        0x00000882:    6068        h`      STR      r0,[r5,#4]
+        0x00000884:    bd38        8.      POP      {r3-r5,pc}
+    $d
+        0x00000886:    0000        ..      DCW    0
+        0x00000888:    04020201    ....    DCD    67240449
+        0x0000088c:    50000200    ...P    DCD    1342177792
+        0x00000890:    01518000    ..Q.    DCD    22118400
+        0x00000894:    00b71b00    ....    DCD    12000000
+        0x00000898:    20000000    ...     DCD    536870912
+        0x0000089c:    000f4240    @B..    DCD    1000000
+    $t
+    i.SystemInit
+    SystemInit
+        0x000008a0:    4770        pG      BX       lr
+        0x000008a2:    0000        ..      MOVS     r0,r0
+    i.UART02_IRQHandler
+    UART02_IRQHandler
+        0x000008a4:    b570        p.      PUSH     {r4-r6,lr}
+        0x000008a6:    4b21        !K      LDR      r3,[pc,#132] ; [0x92c] = 0x40050000
+        0x000008a8:    69d8        .i      LDR      r0,[r3,#0x1c]
+        0x000008aa:    69d9        .i      LDR      r1,[r3,#0x1c]
+        0x000008ac:    4001        .@      ANDS     r1,r1,r0
+        0x000008ae:    07c8        ..      LSLS     r0,r1,#31
+        0x000008b0:    d03a        :.      BEQ      0x928 ; UART02_IRQHandler + 132
+        0x000008b2:    4d1f        .M      LDR      r5,[pc,#124] ; [0x930] = 0x50004280
+        0x000008b4:    491f        .I      LDR      r1,[pc,#124] ; [0x934] = 0x2000006c
+        0x000008b6:    4a20         J      LDR      r2,[pc,#128] ; [0x938] = 0x2000002c
+        0x000008b8:    2400        .$      MOVS     r4,#0
+        0x000008ba:    6998        .i      LDR      r0,[r3,#0x18]
+        0x000008bc:    0440        @.      LSLS     r0,r0,#17
+        0x000008be:    d433        3.      BMI      0x928 ; UART02_IRQHandler + 132
+        0x000008c0:    6818        .h      LDR      r0,[r3,#0]
+        0x000008c2:    b2c0        ..      UXTB     r0,r0
+        0x000008c4:    280a        .(      CMP      r0,#0xa
+        0x000008c6:    d006        ..      BEQ      0x8d6 ; UART02_IRQHandler + 50
+        0x000008c8:    632c        ,c      STR      r4,[r5,#0x30]
+        0x000008ca:    7816        .x      LDRB     r6,[r2,#0]
+        0x000008cc:    5588        .U      STRB     r0,[r1,r6]
+        0x000008ce:    7810        .x      LDRB     r0,[r2,#0]
+        0x000008d0:    1c40        @.      ADDS     r0,r0,#1
+        0x000008d2:    7010        .p      STRB     r0,[r2,#0]
+        0x000008d4:    e7f1        ..      B        0x8ba ; UART02_IRQHandler + 22
+        0x000008d6:    7808        .x      LDRB     r0,[r1,#0]
+        0x000008d8:    788b        .x      LDRB     r3,[r1,#2]
+        0x000008da:    3830        08      SUBS     r0,r0,#0x30
+        0x000008dc:    2564        d%      MOVS     r5,#0x64
+        0x000008de:    4368        hC      MULS     r0,r5,r0
+        0x000008e0:    181d        ..      ADDS     r5,r3,r0
+        0x000008e2:    784b        Kx      LDRB     r3,[r1,#1]
+        0x000008e4:    200a        .       MOVS     r0,#0xa
+        0x000008e6:    4343        CC      MULS     r3,r0,r3
+        0x000008e8:    2021        !       MOVS     r0,#0x21
+        0x000008ea:    0100        ..      LSLS     r0,r0,#4
+        0x000008ec:    1a1b        ..      SUBS     r3,r3,r0
+        0x000008ee:    18eb        ..      ADDS     r3,r5,r3
+        0x000008f0:    7093        .p      STRB     r3,[r2,#2]
+        0x000008f2:    78cb        .x      LDRB     r3,[r1,#3]
+        0x000008f4:    794d        My      LDRB     r5,[r1,#5]
+        0x000008f6:    3b30        0;      SUBS     r3,r3,#0x30
+        0x000008f8:    2664        d&      MOVS     r6,#0x64
+        0x000008fa:    4373        sC      MULS     r3,r6,r3
+        0x000008fc:    18ed        ..      ADDS     r5,r5,r3
+        0x000008fe:    790b        .y      LDRB     r3,[r1,#4]
+        0x00000900:    260a        .&      MOVS     r6,#0xa
+        0x00000902:    4373        sC      MULS     r3,r6,r3
+        0x00000904:    1a1b        ..      SUBS     r3,r3,r0
+        0x00000906:    18eb        ..      ADDS     r3,r5,r3
+        0x00000908:    70d3        .p      STRB     r3,[r2,#3]
+        0x0000090a:    798b        .y      LDRB     r3,[r1,#6]
+        0x0000090c:    7a0d        .z      LDRB     r5,[r1,#8]
+        0x0000090e:    3b30        0;      SUBS     r3,r3,#0x30
+        0x00000910:    2664        d&      MOVS     r6,#0x64
+        0x00000912:    4373        sC      MULS     r3,r6,r3
+        0x00000914:    18eb        ..      ADDS     r3,r5,r3
+        0x00000916:    79c9        .y      LDRB     r1,[r1,#7]
+        0x00000918:    250a        .%      MOVS     r5,#0xa
+        0x0000091a:    4369        iC      MULS     r1,r5,r1
+        0x0000091c:    1a08        ..      SUBS     r0,r1,r0
+        0x0000091e:    1818        ..      ADDS     r0,r3,r0
+        0x00000920:    7110        .q      STRB     r0,[r2,#4]
+        0x00000922:    7014        .p      STRB     r4,[r2,#0]
+        0x00000924:    2001        .       MOVS     r0,#1
+        0x00000926:    7050        Pp      STRB     r0,[r2,#1]
+        0x00000928:    bd70        p.      POP      {r4-r6,pc}
+    $d
+        0x0000092a:    0000        ..      DCW    0
+        0x0000092c:    40050000    ...@    DCD    1074069504
+        0x00000930:    50004280    .B.P    DCD    1342194304
+        0x00000934:    2000006c    l..     DCD    536871020
+        0x00000938:    2000002c    ,..     DCD    536870956
+    $t
+    i.UART_Open
+    UART_Open
+        0x0000093c:    b5f0        ..      PUSH     {r4-r7,lr}
+        0x0000093e:    4b1d        .K      LDR      r3,[pc,#116] ; [0x9b4] = 0x10c8
+        0x00000940:    4604        .F      MOV      r4,r0
+        0x00000942:    460d        .F      MOV      r5,r1
+        0x00000944:    cb0f        ..      LDM      r3,{r0-r3}
+        0x00000946:    b085        ..      SUB      sp,sp,#0x14
+        0x00000948:    466e        nF      MOV      r6,sp
+        0x0000094a:    c60f        ..      STM      r6!,{r0-r3}
+        0x0000094c:    481a        .H      LDR      r0,[pc,#104] ; [0x9b8] = 0x50000200
+        0x0000094e:    6941        Ai      LDR      r1,[r0,#0x14]
+        0x00000950:    6980        .i      LDR      r0,[r0,#0x18]
+        0x00000952:    0189        ..      LSLS     r1,r1,#6
+        0x00000954:    0f8e        ..      LSRS     r6,r1,#30
+        0x00000956:    0500        ..      LSLS     r0,r0,#20
+        0x00000958:    0f07        ..      LSRS     r7,r0,#28
+        0x0000095a:    2000        .       MOVS     r0,#0
+        0x0000095c:    6320         c      STR      r0,[r4,#0x30]
+        0x0000095e:    2003        .       MOVS     r0,#3
+        0x00000960:    60e0        .`      STR      r0,[r4,#0xc]
+        0x00000962:    68a0        .h      LDR      r0,[r4,#8]
+        0x00000964:    4915        .I      LDR      r1,[pc,#84] ; [0x9bc] = 0xfff0ff0f
+        0x00000966:    4008        .@      ANDS     r0,r0,r1
+        0x00000968:    60a0        .`      STR      r0,[r4,#8]
+        0x0000096a:    2e01        ..      CMP      r6,#1
+        0x0000096c:    d102        ..      BNE      0x974 ; UART_Open + 56
+        0x0000096e:    f7fffd21    ..!.    BL       CLK_GetPLLClockFreq ; 0x3b4
+        0x00000972:    9001        ..      STR      r0,[sp,#4]
+        0x00000974:    2d00        .-      CMP      r5,#0
+        0x00000976:    d01b        ..      BEQ      0x9b0 ; UART_Open + 116
+        0x00000978:    00b1        ..      LSLS     r1,r6,#2
+        0x0000097a:    4668        hF      MOV      r0,sp
+        0x0000097c:    5840        @X      LDR      r0,[r0,r1]
+        0x0000097e:    1c79        y.      ADDS     r1,r7,#1
+        0x00000980:    f7fffbce    ....    BL       __aeabi_uidiv ; 0x120
+        0x00000984:    4606        .F      MOV      r6,r0
+        0x00000986:    0869        i.      LSRS     r1,r5,#1
+        0x00000988:    1840        @.      ADDS     r0,r0,r1
+        0x0000098a:    4629        )F      MOV      r1,r5
+        0x0000098c:    f7fffbc8    ....    BL       __aeabi_uidiv ; 0x120
+        0x00000990:    490b        .I      LDR      r1,[pc,#44] ; [0x9c0] = 0xffff
+        0x00000992:    1e80        ..      SUBS     r0,r0,#2
+        0x00000994:    4288        .B      CMP      r0,r1
+        0x00000996:    d907        ..      BLS      0x9a8 ; UART_Open + 108
+        0x00000998:    00e9        ..      LSLS     r1,r5,#3
+        0x0000099a:    1870        p.      ADDS     r0,r6,r1
+        0x0000099c:    4629        )F      MOV      r1,r5
+        0x0000099e:    f7fffbbf    ....    BL       __aeabi_uidiv ; 0x120
+        0x000009a2:    0900        ..      LSRS     r0,r0,#4
+        0x000009a4:    1e80        ..      SUBS     r0,r0,#2
+        0x000009a6:    e002        ..      B        0x9ae ; UART_Open + 114
+        0x000009a8:    2103        .!      MOVS     r1,#3
+        0x000009aa:    0709        ..      LSLS     r1,r1,#28
+        0x000009ac:    4308        .C      ORRS     r0,r0,r1
+        0x000009ae:    6260        `b      STR      r0,[r4,#0x24]
+        0x000009b0:    b005        ..      ADD      sp,sp,#0x14
+        0x000009b2:    bdf0        ..      POP      {r4-r7,pc}
+    $d
+        0x000009b4:    000010c8    ....    DCD    4296
+        0x000009b8:    50000200    ...P    DCD    1342177792
+        0x000009bc:    fff0ff0f    ....    DCD    4293984015
+        0x000009c0:    0000ffff    ....    DCD    65535
+    $t
+    i.UART_Write
+    UART_Write
+        0x000009c4:    b570        p.      PUSH     {r4-r6,lr}
+        0x000009c6:    4604        .F      MOV      r4,r0
+        0x000009c8:    2000        .       MOVS     r0,#0
+        0x000009ca:    2501        .%      MOVS     r5,#1
+        0x000009cc:    07ad        ..      LSLS     r5,r5,#30
+        0x000009ce:    e00c        ..      B        0x9ea ; UART_Write + 38
+        0x000009d0:    2300        .#      MOVS     r3,#0
+        0x000009d2:    e004        ..      B        0x9de ; UART_Write + 26
+        0x000009d4:    1c5b        [.      ADDS     r3,r3,#1
+        0x000009d6:    42ab        .B      CMP      r3,r5
+        0x000009d8:    d301        ..      BCC      0x9de ; UART_Write + 26
+        0x000009da:    2000        .       MOVS     r0,#0
+        0x000009dc:    bd70        p.      POP      {r4-r6,pc}
+        0x000009de:    69a6        .i      LDR      r6,[r4,#0x18]
+        0x000009e0:    00f6        ..      LSLS     r6,r6,#3
+        0x000009e2:    d5f7        ..      BPL      0x9d4 ; UART_Write + 16
+        0x000009e4:    5c0b        .\      LDRB     r3,[r1,r0]
+        0x000009e6:    6023        #`      STR      r3,[r4,#0]
+        0x000009e8:    1c40        @.      ADDS     r0,r0,#1
+        0x000009ea:    4290        .B      CMP      r0,r2
+        0x000009ec:    d1f0        ..      BNE      0x9d0 ; UART_Write + 12
+        0x000009ee:    bd70        p.      POP      {r4-r6,pc}
+    i.__0sprintf$6
+    __0sprintf$6
+    __1sprintf$6
+    __2sprintf
+        0x000009f0:    b40f        ..      PUSH     {r0-r3}
+        0x000009f2:    b510        ..      PUSH     {r4,lr}
+        0x000009f4:    a904        ..      ADD      r1,sp,#0x10
+        0x000009f6:    4b07        .K      LDR      r3,[pc,#28] ; [0xa14] = 0xd89
+        0x000009f8:    aa02        ..      ADD      r2,sp,#8
+        0x000009fa:    9803        ..      LDR      r0,[sp,#0xc]
+        0x000009fc:    f000f81c    ....    BL       _printf_core ; 0xa38
+        0x00000a00:    4604        .F      MOV      r4,r0
+        0x00000a02:    a902        ..      ADD      r1,sp,#8
+        0x00000a04:    2000        .       MOVS     r0,#0
+        0x00000a06:    f000f9bf    ....    BL       _sputc ; 0xd88
+        0x00000a0a:    4620         F      MOV      r0,r4
+        0x00000a0c:    bc10        ..      POP      {r4}
+        0x00000a0e:    bc08        ..      POP      {r3}
+        0x00000a10:    b004        ..      ADD      sp,sp,#0x10
+        0x00000a12:    4718        .G      BX       r3
+    $d
+        0x00000a14:    00000d89    ....    DCD    3465
+    $t
+    i.__scatterload_copy
+    __scatterload_copy
+        0x00000a18:    e002        ..      B        0xa20 ; __scatterload_copy + 8
+        0x00000a1a:    c808        ..      LDM      r0!,{r3}
+        0x00000a1c:    1f12        ..      SUBS     r2,r2,#4
+        0x00000a1e:    c108        ..      STM      r1!,{r3}
+        0x00000a20:    2a00        .*      CMP      r2,#0
+        0x00000a22:    d1fa        ..      BNE      0xa1a ; __scatterload_copy + 2
+        0x00000a24:    4770        pG      BX       lr
+    i.__scatterload_null
+    __scatterload_null
+        0x00000a26:    4770        pG      BX       lr
+    i.__scatterload_zeroinit
+    __scatterload_zeroinit
+        0x00000a28:    2000        .       MOVS     r0,#0
+        0x00000a2a:    e001        ..      B        0xa30 ; __scatterload_zeroinit + 8
+        0x00000a2c:    c101        ..      STM      r1!,{r0}
+        0x00000a2e:    1f12        ..      SUBS     r2,r2,#4
+        0x00000a30:    2a00        .*      CMP      r2,#0
+        0x00000a32:    d1fb        ..      BNE      0xa2c ; __scatterload_zeroinit + 4
+        0x00000a34:    4770        pG      BX       lr
+        0x00000a36:    0000        ..      MOVS     r0,r0
+    i._printf_core
+    _printf_core
+        0x00000a38:    b5ff        ..      PUSH     {r0-r7,lr}
+        0x00000a3a:    b08f        ..      SUB      sp,sp,#0x3c
+        0x00000a3c:    4605        .F      MOV      r5,r0
+        0x00000a3e:    2600        .&      MOVS     r6,#0
+        0x00000a40:    e0e6        ..      B        0xc10 ; _printf_core + 472
+        0x00000a42:    2825        %(      CMP      r0,#0x25
+        0x00000a44:    d17e        ~.      BNE      0xb44 ; _printf_core + 268
+        0x00000a46:    2400        .$      MOVS     r4,#0
+        0x00000a48:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000a4a:    4abb        .J      LDR      r2,[pc,#748] ; [0xd38] = 0x12809
+        0x00000a4c:    9402        ..      STR      r4,[sp,#8]
+        0x00000a4e:    2101        .!      MOVS     r1,#1
+        0x00000a50:    9400        ..      STR      r4,[sp,#0]
+        0x00000a52:    782b        +x      LDRB     r3,[r5,#0]
+        0x00000a54:    4608        .F      MOV      r0,r1
+        0x00000a56:    3b20         ;      SUBS     r3,r3,#0x20
+        0x00000a58:    4098        .@      LSLS     r0,r0,r3
+        0x00000a5a:    4603        .F      MOV      r3,r0
+        0x00000a5c:    4213        .B      TST      r3,r2
+        0x00000a5e:    d002        ..      BEQ      0xa66 ; _printf_core + 46
+        0x00000a60:    4304        .C      ORRS     r4,r4,r0
+        0x00000a62:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000a64:    e7f5        ..      B        0xa52 ; _printf_core + 26
+        0x00000a66:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000a68:    282a        *(      CMP      r0,#0x2a
+        0x00000a6a:    d00e        ..      BEQ      0xa8a ; _printf_core + 82
+        0x00000a6c:    2202        ."      MOVS     r2,#2
+        0x00000a6e:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000a70:    4601        .F      MOV      r1,r0
+        0x00000a72:    3930        09      SUBS     r1,r1,#0x30
+        0x00000a74:    2909        .)      CMP      r1,#9
+        0x00000a76:    d816        ..      BHI      0xaa6 ; _printf_core + 110
+        0x00000a78:    9902        ..      LDR      r1,[sp,#8]
+        0x00000a7a:    230a        .#      MOVS     r3,#0xa
+        0x00000a7c:    4359        YC      MULS     r1,r3,r1
+        0x00000a7e:    3930        09      SUBS     r1,r1,#0x30
+        0x00000a80:    1840        @.      ADDS     r0,r0,r1
+        0x00000a82:    4314        .C      ORRS     r4,r4,r2
+        0x00000a84:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000a86:    9002        ..      STR      r0,[sp,#8]
+        0x00000a88:    e7f1        ..      B        0xa6e ; _printf_core + 54
+        0x00000a8a:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000a8c:    c802        ..      LDM      r0!,{r1}
+        0x00000a8e:    9102        ..      STR      r1,[sp,#8]
+        0x00000a90:    9010        ..      STR      r0,[sp,#0x40]
+        0x00000a92:    2900        .)      CMP      r1,#0
+        0x00000a94:    da04        ..      BGE      0xaa0 ; _printf_core + 104
+        0x00000a96:    2001        .       MOVS     r0,#1
+        0x00000a98:    0340        @.      LSLS     r0,r0,#13
+        0x00000a9a:    4304        .C      ORRS     r4,r4,r0
+        0x00000a9c:    4248        HB      RSBS     r0,r1,#0
+        0x00000a9e:    9002        ..      STR      r0,[sp,#8]
+        0x00000aa0:    2002        .       MOVS     r0,#2
+        0x00000aa2:    4304        .C      ORRS     r4,r4,r0
+        0x00000aa4:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000aa6:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000aa8:    282e        .(      CMP      r0,#0x2e
+        0x00000aaa:    d117        ..      BNE      0xadc ; _printf_core + 164
+        0x00000aac:    2004        .       MOVS     r0,#4
+        0x00000aae:    4304        .C      ORRS     r4,r4,r0
+        0x00000ab0:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000ab2:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000ab4:    282a        *(      CMP      r0,#0x2a
+        0x00000ab6:    d10c        ..      BNE      0xad2 ; _printf_core + 154
+        0x00000ab8:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000aba:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000abc:    c802        ..      LDM      r0!,{r1}
+        0x00000abe:    9100        ..      STR      r1,[sp,#0]
+        0x00000ac0:    9010        ..      STR      r0,[sp,#0x40]
+        0x00000ac2:    e00b        ..      B        0xadc ; _printf_core + 164
+        0x00000ac4:    9900        ..      LDR      r1,[sp,#0]
+        0x00000ac6:    220a        ."      MOVS     r2,#0xa
+        0x00000ac8:    4351        QC      MULS     r1,r2,r1
+        0x00000aca:    3930        09      SUBS     r1,r1,#0x30
+        0x00000acc:    1840        @.      ADDS     r0,r0,r1
+        0x00000ace:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000ad0:    9000        ..      STR      r0,[sp,#0]
+        0x00000ad2:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000ad4:    4601        .F      MOV      r1,r0
+        0x00000ad6:    3930        09      SUBS     r1,r1,#0x30
+        0x00000ad8:    2909        .)      CMP      r1,#9
+        0x00000ada:    d9f3        ..      BLS      0xac4 ; _printf_core + 140
+        0x00000adc:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000ade:    286c        l(      CMP      r0,#0x6c
+        0x00000ae0:    d010        ..      BEQ      0xb04 ; _printf_core + 204
+        0x00000ae2:    dc06        ..      BGT      0xaf2 ; _printf_core + 186
+        0x00000ae4:    284c        L(      CMP      r0,#0x4c
+        0x00000ae6:    d01a        ..      BEQ      0xb1e ; _printf_core + 230
+        0x00000ae8:    2868        h(      CMP      r0,#0x68
+        0x00000aea:    d00e        ..      BEQ      0xb0a ; _printf_core + 210
+        0x00000aec:    286a        j(      CMP      r0,#0x6a
+        0x00000aee:    d117        ..      BNE      0xb20 ; _printf_core + 232
+        0x00000af0:    e004        ..      B        0xafc ; _printf_core + 196
+        0x00000af2:    2874        t(      CMP      r0,#0x74
+        0x00000af4:    d013        ..      BEQ      0xb1e ; _printf_core + 230
+        0x00000af6:    287a        z(      CMP      r0,#0x7a
+        0x00000af8:    d112        ..      BNE      0xb20 ; _printf_core + 232
+        0x00000afa:    e010        ..      B        0xb1e ; _printf_core + 230
+        0x00000afc:    2001        .       MOVS     r0,#1
+        0x00000afe:    0540        @.      LSLS     r0,r0,#21
+        0x00000b00:    4304        .C      ORRS     r4,r4,r0
+        0x00000b02:    e00c        ..      B        0xb1e ; _printf_core + 230
+        0x00000b04:    2101        .!      MOVS     r1,#1
+        0x00000b06:    0509        ..      LSLS     r1,r1,#20
+        0x00000b08:    e001        ..      B        0xb0e ; _printf_core + 214
+        0x00000b0a:    2103        .!      MOVS     r1,#3
+        0x00000b0c:    0509        ..      LSLS     r1,r1,#20
+        0x00000b0e:    430c        .C      ORRS     r4,r4,r1
+        0x00000b10:    7869        ix      LDRB     r1,[r5,#1]
+        0x00000b12:    4281        .B      CMP      r1,r0
+        0x00000b14:    d103        ..      BNE      0xb1e ; _printf_core + 230
+        0x00000b16:    2001        .       MOVS     r0,#1
+        0x00000b18:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000b1a:    0500        ..      LSLS     r0,r0,#20
+        0x00000b1c:    1824        $.      ADDS     r4,r4,r0
+        0x00000b1e:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000b20:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000b22:    2869        i(      CMP      r0,#0x69
+        0x00000b24:    d07d        }.      BEQ      0xc22 ; _printf_core + 490
+        0x00000b26:    dc07        ..      BGT      0xb38 ; _printf_core + 256
+        0x00000b28:    2800        .(      CMP      r0,#0
+        0x00000b2a:    d077        w.      BEQ      0xc1c ; _printf_core + 484
+        0x00000b2c:    2863        c(      CMP      r0,#0x63
+        0x00000b2e:    d029        ).      BEQ      0xb84 ; _printf_core + 332
+        0x00000b30:    2864        d(      CMP      r0,#0x64
+        0x00000b32:    d107        ..      BNE      0xb44 ; _printf_core + 268
+        0x00000b34:    e075        u.      B        0xc22 ; _printf_core + 490
+        0x00000b36:    e005        ..      B        0xb44 ; _printf_core + 268
+        0x00000b38:    286e        n(      CMP      r0,#0x6e
+        0x00000b3a:    d008        ..      BEQ      0xb4e ; _printf_core + 278
+        0x00000b3c:    2873        s(      CMP      r0,#0x73
+        0x00000b3e:    d02c        ,.      BEQ      0xb9a ; _printf_core + 354
+        0x00000b40:    2875        u(      CMP      r0,#0x75
+        0x00000b42:    d06a        j.      BEQ      0xc1a ; _printf_core + 482
+        0x00000b44:    9a12        ..      LDR      r2,[sp,#0x48]
+        0x00000b46:    9911        ..      LDR      r1,[sp,#0x44]
+        0x00000b48:    4790        .G      BLX      r2
+        0x00000b4a:    1c76        v.      ADDS     r6,r6,#1
+        0x00000b4c:    e05f        _.      B        0xc0e ; _printf_core + 470
+        0x00000b4e:    0260        `.      LSLS     r0,r4,#9
+        0x00000b50:    0f40        @.      LSRS     r0,r0,#29
+        0x00000b52:    2802        .(      CMP      r0,#2
+        0x00000b54:    d009        ..      BEQ      0xb6a ; _printf_core + 306
+        0x00000b56:    2803        .(      CMP      r0,#3
+        0x00000b58:    d00d        ..      BEQ      0xb76 ; _printf_core + 318
+        0x00000b5a:    2804        .(      CMP      r0,#4
+        0x00000b5c:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000b5e:    6801        .h      LDR      r1,[r0,#0]
+        0x00000b60:    d00d        ..      BEQ      0xb7e ; _printf_core + 326
+        0x00000b62:    1d00        ..      ADDS     r0,r0,#4
+        0x00000b64:    600e        .`      STR      r6,[r1,#0]
+        0x00000b66:    9010        ..      STR      r0,[sp,#0x40]
+        0x00000b68:    e051        Q.      B        0xc0e ; _printf_core + 470
+        0x00000b6a:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000b6c:    17f2        ..      ASRS     r2,r6,#31
+        0x00000b6e:    c802        ..      LDM      r0!,{r1}
+        0x00000b70:    600e        .`      STR      r6,[r1,#0]
+        0x00000b72:    604a        J`      STR      r2,[r1,#4]
+        0x00000b74:    e7f7        ..      B        0xb66 ; _printf_core + 302
+        0x00000b76:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000b78:    c802        ..      LDM      r0!,{r1}
+        0x00000b7a:    800e        ..      STRH     r6,[r1,#0]
+        0x00000b7c:    e7f3        ..      B        0xb66 ; _printf_core + 302
+        0x00000b7e:    1d00        ..      ADDS     r0,r0,#4
+        0x00000b80:    700e        .p      STRB     r6,[r1,#0]
+        0x00000b82:    e7f0        ..      B        0xb66 ; _printf_core + 302
+        0x00000b84:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000b86:    466a        jF      MOV      r2,sp
+        0x00000b88:    c802        ..      LDM      r0!,{r1}
+        0x00000b8a:    7311        .s      STRB     r1,[r2,#0xc]
+        0x00000b8c:    9010        ..      STR      r0,[sp,#0x40]
+        0x00000b8e:    2000        .       MOVS     r0,#0
+        0x00000b90:    7350        Ps      STRB     r0,[r2,#0xd]
+        0x00000b92:    a803        ..      ADD      r0,sp,#0xc
+        0x00000b94:    9001        ..      STR      r0,[sp,#4]
+        0x00000b96:    2001        .       MOVS     r0,#1
+        0x00000b98:    e005        ..      B        0xba6 ; _printf_core + 366
+        0x00000b9a:    9810        ..      LDR      r0,[sp,#0x40]
+        0x00000b9c:    c802        ..      LDM      r0!,{r1}
+        0x00000b9e:    9101        ..      STR      r1,[sp,#4]
+        0x00000ba0:    9010        ..      STR      r0,[sp,#0x40]
+        0x00000ba2:    2000        .       MOVS     r0,#0
+        0x00000ba4:    43c0        .C      MVNS     r0,r0
+        0x00000ba6:    0761        a.      LSLS     r1,r4,#29
+        0x00000ba8:    d50c        ..      BPL      0xbc4 ; _printf_core + 396
+        0x00000baa:    2700        .'      MOVS     r7,#0
+        0x00000bac:    e000        ..      B        0xbb0 ; _printf_core + 376
+        0x00000bae:    1c7f        ..      ADDS     r7,r7,#1
+        0x00000bb0:    9900        ..      LDR      r1,[sp,#0]
+        0x00000bb2:    428f        .B      CMP      r7,r1
+        0x00000bb4:    da0f        ..      BGE      0xbd6 ; _printf_core + 414
+        0x00000bb6:    4287        .B      CMP      r7,r0
+        0x00000bb8:    dbf9        ..      BLT      0xbae ; _printf_core + 374
+        0x00000bba:    9901        ..      LDR      r1,[sp,#4]
+        0x00000bbc:    5dc9        .]      LDRB     r1,[r1,r7]
+        0x00000bbe:    2900        .)      CMP      r1,#0
+        0x00000bc0:    d1f5        ..      BNE      0xbae ; _printf_core + 374
+        0x00000bc2:    e008        ..      B        0xbd6 ; _printf_core + 414
+        0x00000bc4:    2700        .'      MOVS     r7,#0
+        0x00000bc6:    e000        ..      B        0xbca ; _printf_core + 402
+        0x00000bc8:    1c7f        ..      ADDS     r7,r7,#1
+        0x00000bca:    4287        .B      CMP      r7,r0
+        0x00000bcc:    dbfc        ..      BLT      0xbc8 ; _printf_core + 400
+        0x00000bce:    9901        ..      LDR      r1,[sp,#4]
+        0x00000bd0:    5dc9        .]      LDRB     r1,[r1,r7]
+        0x00000bd2:    2900        .)      CMP      r1,#0
+        0x00000bd4:    d1f8        ..      BNE      0xbc8 ; _printf_core + 400
+        0x00000bd6:    9802        ..      LDR      r0,[sp,#8]
+        0x00000bd8:    4621        !F      MOV      r1,r4
+        0x00000bda:    1bc0        ..      SUBS     r0,r0,r7
+        0x00000bdc:    9002        ..      STR      r0,[sp,#8]
+        0x00000bde:    9b12        ..      LDR      r3,[sp,#0x48]
+        0x00000be0:    9a11        ..      LDR      r2,[sp,#0x44]
+        0x00000be2:    f000f8bb    ....    BL       _printf_pre_padding ; 0xd5c
+        0x00000be6:    1980        ..      ADDS     r0,r0,r6
+        0x00000be8:    19c6        ..      ADDS     r6,r0,r7
+        0x00000bea:    e007        ..      B        0xbfc ; _printf_core + 452
+        0x00000bec:    9801        ..      LDR      r0,[sp,#4]
+        0x00000bee:    9901        ..      LDR      r1,[sp,#4]
+        0x00000bf0:    7800        .x      LDRB     r0,[r0,#0]
+        0x00000bf2:    1c49        I.      ADDS     r1,r1,#1
+        0x00000bf4:    9101        ..      STR      r1,[sp,#4]
+        0x00000bf6:    9a12        ..      LDR      r2,[sp,#0x48]
+        0x00000bf8:    9911        ..      LDR      r1,[sp,#0x44]
+        0x00000bfa:    4790        .G      BLX      r2
+        0x00000bfc:    1e7f        ..      SUBS     r7,r7,#1
+        0x00000bfe:    d2f5        ..      BCS      0xbec ; _printf_core + 436
+        0x00000c00:    4621        !F      MOV      r1,r4
+        0x00000c02:    9b12        ..      LDR      r3,[sp,#0x48]
+        0x00000c04:    9a11        ..      LDR      r2,[sp,#0x44]
+        0x00000c06:    9802        ..      LDR      r0,[sp,#8]
+        0x00000c08:    f000f898    ....    BL       _printf_post_padding ; 0xd3c
+        0x00000c0c:    1986        ..      ADDS     r6,r0,r6
+        0x00000c0e:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000c10:    7828        (x      LDRB     r0,[r5,#0]
+        0x00000c12:    2800        .(      CMP      r0,#0
+        0x00000c14:    d002        ..      BEQ      0xc1c ; _printf_core + 484
+        0x00000c16:    e714        ..      B        0xa42 ; _printf_core + 10
+        0x00000c18:    e000        ..      B        0xc1c ; _printf_core + 484
+        0x00000c1a:    e022        ".      B        0xc62 ; _printf_core + 554
+        0x00000c1c:    4630        0F      MOV      r0,r6
+        0x00000c1e:    b013        ..      ADD      sp,sp,#0x4c
+        0x00000c20:    bdf0        ..      POP      {r4-r7,pc}
+        0x00000c22:    200a        .       MOVS     r0,#0xa
+        0x00000c24:    9001        ..      STR      r0,[sp,#4]
+        0x00000c26:    9910        ..      LDR      r1,[sp,#0x40]
+        0x00000c28:    c901        ..      LDM      r1!,{r0}
+        0x00000c2a:    9110        ..      STR      r1,[sp,#0x40]
+        0x00000c2c:    0261        a.      LSLS     r1,r4,#9
+        0x00000c2e:    0f49        I.      LSRS     r1,r1,#29
+        0x00000c30:    2903        .)      CMP      r1,#3
+        0x00000c32:    d100        ..      BNE      0xc36 ; _printf_core + 510
+        0x00000c34:    b200        ..      SXTH     r0,r0
+        0x00000c36:    2904        .)      CMP      r1,#4
+        0x00000c38:    d100        ..      BNE      0xc3c ; _printf_core + 516
+        0x00000c3a:    b240        @.      SXTB     r0,r0
+        0x00000c3c:    2800        .(      CMP      r0,#0
+        0x00000c3e:    da02        ..      BGE      0xc46 ; _printf_core + 526
+        0x00000c40:    4240        @B      RSBS     r0,r0,#0
+        0x00000c42:    212d        -!      MOVS     r1,#0x2d
+        0x00000c44:    e002        ..      B        0xc4c ; _printf_core + 532
+        0x00000c46:    0521        !.      LSLS     r1,r4,#20
+        0x00000c48:    d504        ..      BPL      0xc54 ; _printf_core + 540
+        0x00000c4a:    212b        +!      MOVS     r1,#0x2b
+        0x00000c4c:    466a        jF      MOV      r2,sp
+        0x00000c4e:    7311        .s      STRB     r1,[r2,#0xc]
+        0x00000c50:    2101        .!      MOVS     r1,#1
+        0x00000c52:    e003        ..      B        0xc5c ; _printf_core + 548
+        0x00000c54:    07e1        ..      LSLS     r1,r4,#31
+        0x00000c56:    d011        ..      BEQ      0xc7c ; _printf_core + 580
+        0x00000c58:    2120         !      MOVS     r1,#0x20
+        0x00000c5a:    e7f7        ..      B        0xc4c ; _printf_core + 532
+        0x00000c5c:    af0c        ..      ADD      r7,sp,#0x30
+        0x00000c5e:    910c        ..      STR      r1,[sp,#0x30]
+        0x00000c60:    e014        ..      B        0xc8c ; _printf_core + 596
+        0x00000c62:    200a        .       MOVS     r0,#0xa
+        0x00000c64:    9001        ..      STR      r0,[sp,#4]
+        0x00000c66:    9910        ..      LDR      r1,[sp,#0x40]
+        0x00000c68:    c901        ..      LDM      r1!,{r0}
+        0x00000c6a:    9110        ..      STR      r1,[sp,#0x40]
+        0x00000c6c:    0261        a.      LSLS     r1,r4,#9
+        0x00000c6e:    0f49        I.      LSRS     r1,r1,#29
+        0x00000c70:    2903        .)      CMP      r1,#3
+        0x00000c72:    d100        ..      BNE      0xc76 ; _printf_core + 574
+        0x00000c74:    b280        ..      UXTH     r0,r0
+        0x00000c76:    2904        .)      CMP      r1,#4
+        0x00000c78:    d100        ..      BNE      0xc7c ; _printf_core + 580
+        0x00000c7a:    b2c0        ..      UXTB     r0,r0
+        0x00000c7c:    2100        .!      MOVS     r1,#0
+        0x00000c7e:    e7ed        ..      B        0xc5c ; _printf_core + 548
+        0x00000c80:    9901        ..      LDR      r1,[sp,#4]
+        0x00000c82:    f7fffa4d    ..M.    BL       __aeabi_uidiv ; 0x120
+        0x00000c86:    3130        01      ADDS     r1,r1,#0x30
+        0x00000c88:    1e7f        ..      SUBS     r7,r7,#1
+        0x00000c8a:    7039        9p      STRB     r1,[r7,#0]
+        0x00000c8c:    2800        .(      CMP      r0,#0
+        0x00000c8e:    d1f7        ..      BNE      0xc80 ; _printf_core + 584
+        0x00000c90:    a804        ..      ADD      r0,sp,#0x10
+        0x00000c92:    1bc0        ..      SUBS     r0,r0,r7
+        0x00000c94:    3020         0      ADDS     r0,r0,#0x20
+        0x00000c96:    9001        ..      STR      r0,[sp,#4]
+        0x00000c98:    0760        `.      LSLS     r0,r4,#29
+        0x00000c9a:    d504        ..      BPL      0xca6 ; _printf_core + 622
+        0x00000c9c:    2001        .       MOVS     r0,#1
+        0x00000c9e:    0400        ..      LSLS     r0,r0,#16
+        0x00000ca0:    4384        .C      BICS     r4,r4,r0
+        0x00000ca2:    9800        ..      LDR      r0,[sp,#0]
+        0x00000ca4:    e001        ..      B        0xcaa ; _printf_core + 626
+        0x00000ca6:    2001        .       MOVS     r0,#1
+        0x00000ca8:    9000        ..      STR      r0,[sp,#0]
+        0x00000caa:    9901        ..      LDR      r1,[sp,#4]
+        0x00000cac:    4288        .B      CMP      r0,r1
+        0x00000cae:    dd01        ..      BLE      0xcb4 ; _printf_core + 636
+        0x00000cb0:    1a40        @.      SUBS     r0,r0,r1
+        0x00000cb2:    e000        ..      B        0xcb6 ; _printf_core + 638
+        0x00000cb4:    2000        .       MOVS     r0,#0
+        0x00000cb6:    1841        A.      ADDS     r1,r0,r1
+        0x00000cb8:    9000        ..      STR      r0,[sp,#0]
+        0x00000cba:    980c        ..      LDR      r0,[sp,#0x30]
+        0x00000cbc:    1809        ..      ADDS     r1,r1,r0
+        0x00000cbe:    9802        ..      LDR      r0,[sp,#8]
+        0x00000cc0:    1a40        @.      SUBS     r0,r0,r1
+        0x00000cc2:    9002        ..      STR      r0,[sp,#8]
+        0x00000cc4:    03e0        ..      LSLS     r0,r4,#15
+        0x00000cc6:    d406        ..      BMI      0xcd6 ; _printf_core + 670
+        0x00000cc8:    4621        !F      MOV      r1,r4
+        0x00000cca:    9b12        ..      LDR      r3,[sp,#0x48]
+        0x00000ccc:    9a11        ..      LDR      r2,[sp,#0x44]
+        0x00000cce:    9802        ..      LDR      r0,[sp,#8]
+        0x00000cd0:    f000f844    ..D.    BL       _printf_pre_padding ; 0xd5c
+        0x00000cd4:    1986        ..      ADDS     r6,r0,r6
+        0x00000cd6:    2000        .       MOVS     r0,#0
+        0x00000cd8:    e008        ..      B        0xcec ; _printf_core + 692
+        0x00000cda:    990d        ..      LDR      r1,[sp,#0x34]
+        0x00000cdc:    a803        ..      ADD      r0,sp,#0xc
+        0x00000cde:    5c40        @\      LDRB     r0,[r0,r1]
+        0x00000ce0:    9a12        ..      LDR      r2,[sp,#0x48]
+        0x00000ce2:    9911        ..      LDR      r1,[sp,#0x44]
+        0x00000ce4:    4790        .G      BLX      r2
+        0x00000ce6:    980d        ..      LDR      r0,[sp,#0x34]
+        0x00000ce8:    1c76        v.      ADDS     r6,r6,#1
+        0x00000cea:    1c40        @.      ADDS     r0,r0,#1
+        0x00000cec:    990c        ..      LDR      r1,[sp,#0x30]
+        0x00000cee:    900d        ..      STR      r0,[sp,#0x34]
+        0x00000cf0:    4288        .B      CMP      r0,r1
+        0x00000cf2:    dbf2        ..      BLT      0xcda ; _printf_core + 674
+        0x00000cf4:    03e0        ..      LSLS     r0,r4,#15
+        0x00000cf6:    d50c        ..      BPL      0xd12 ; _printf_core + 730
+        0x00000cf8:    4621        !F      MOV      r1,r4
+        0x00000cfa:    9b12        ..      LDR      r3,[sp,#0x48]
+        0x00000cfc:    9a11        ..      LDR      r2,[sp,#0x44]
+        0x00000cfe:    9802        ..      LDR      r0,[sp,#8]
+        0x00000d00:    f000f82c    ..,.    BL       _printf_pre_padding ; 0xd5c
+        0x00000d04:    1986        ..      ADDS     r6,r0,r6
+        0x00000d06:    e004        ..      B        0xd12 ; _printf_core + 730
+        0x00000d08:    9a12        ..      LDR      r2,[sp,#0x48]
+        0x00000d0a:    2030        0       MOVS     r0,#0x30
+        0x00000d0c:    9911        ..      LDR      r1,[sp,#0x44]
+        0x00000d0e:    4790        .G      BLX      r2
+        0x00000d10:    1c76        v.      ADDS     r6,r6,#1
+        0x00000d12:    9900        ..      LDR      r1,[sp,#0]
+        0x00000d14:    1e48        H.      SUBS     r0,r1,#1
+        0x00000d16:    9000        ..      STR      r0,[sp,#0]
+        0x00000d18:    2900        .)      CMP      r1,#0
+        0x00000d1a:    dcf5        ..      BGT      0xd08 ; _printf_core + 720
+        0x00000d1c:    e005        ..      B        0xd2a ; _printf_core + 754
+        0x00000d1e:    7838        8x      LDRB     r0,[r7,#0]
+        0x00000d20:    9a12        ..      LDR      r2,[sp,#0x48]
+        0x00000d22:    1c7f        ..      ADDS     r7,r7,#1
+        0x00000d24:    9911        ..      LDR      r1,[sp,#0x44]
+        0x00000d26:    4790        .G      BLX      r2
+        0x00000d28:    1c76        v.      ADDS     r6,r6,#1
+        0x00000d2a:    9901        ..      LDR      r1,[sp,#4]
+        0x00000d2c:    1e48        H.      SUBS     r0,r1,#1
+        0x00000d2e:    9001        ..      STR      r0,[sp,#4]
+        0x00000d30:    2900        .)      CMP      r1,#0
+        0x00000d32:    dcf4        ..      BGT      0xd1e ; _printf_core + 742
+        0x00000d34:    e764        d.      B        0xc00 ; _printf_core + 456
+    $d
+        0x00000d36:    0000        ..      DCW    0
+        0x00000d38:    00012809    .(..    DCD    75785
+    $t
+    i._printf_post_padding
+    _printf_post_padding
+        0x00000d3c:    b5f8        ..      PUSH     {r3-r7,lr}
+        0x00000d3e:    4604        .F      MOV      r4,r0
+        0x00000d40:    2500        .%      MOVS     r5,#0
+        0x00000d42:    4617        .F      MOV      r7,r2
+        0x00000d44:    461e        .F      MOV      r6,r3
+        0x00000d46:    0488        ..      LSLS     r0,r1,#18
+        0x00000d48:    d404        ..      BMI      0xd54 ; _printf_post_padding + 24
+        0x00000d4a:    e005        ..      B        0xd58 ; _printf_post_padding + 28
+        0x00000d4c:    4639        9F      MOV      r1,r7
+        0x00000d4e:    2020                MOVS     r0,#0x20
+        0x00000d50:    47b0        .G      BLX      r6
+        0x00000d52:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000d54:    1e64        d.      SUBS     r4,r4,#1
+        0x00000d56:    d5f9        ..      BPL      0xd4c ; _printf_post_padding + 16
+        0x00000d58:    4628        (F      MOV      r0,r5
+        0x00000d5a:    bdf8        ..      POP      {r3-r7,pc}
+    i._printf_pre_padding
+    _printf_pre_padding
+        0x00000d5c:    b5ff        ..      PUSH     {r0-r7,lr}
+        0x00000d5e:    4604        .F      MOV      r4,r0
+        0x00000d60:    2500        .%      MOVS     r5,#0
+        0x00000d62:    b081        ..      SUB      sp,sp,#4
+        0x00000d64:    461e        .F      MOV      r6,r3
+        0x00000d66:    03c8        ..      LSLS     r0,r1,#15
+        0x00000d68:    d501        ..      BPL      0xd6e ; _printf_pre_padding + 18
+        0x00000d6a:    2730        0'      MOVS     r7,#0x30
+        0x00000d6c:    e000        ..      B        0xd70 ; _printf_pre_padding + 20
+        0x00000d6e:    2720         '      MOVS     r7,#0x20
+        0x00000d70:    0488        ..      LSLS     r0,r1,#18
+        0x00000d72:    d504        ..      BPL      0xd7e ; _printf_pre_padding + 34
+        0x00000d74:    e005        ..      B        0xd82 ; _printf_pre_padding + 38
+        0x00000d76:    4638        8F      MOV      r0,r7
+        0x00000d78:    9903        ..      LDR      r1,[sp,#0xc]
+        0x00000d7a:    47b0        .G      BLX      r6
+        0x00000d7c:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000d7e:    1e64        d.      SUBS     r4,r4,#1
+        0x00000d80:    d5f9        ..      BPL      0xd76 ; _printf_pre_padding + 26
+        0x00000d82:    4628        (F      MOV      r0,r5
+        0x00000d84:    b005        ..      ADD      sp,sp,#0x14
+        0x00000d86:    bdf0        ..      POP      {r4-r7,pc}
+    i._sputc
+    _sputc
+        0x00000d88:    680a        .h      LDR      r2,[r1,#0]
+        0x00000d8a:    1c53        S.      ADDS     r3,r2,#1
+        0x00000d8c:    600b        .`      STR      r3,[r1,#0]
+        0x00000d8e:    7010        .p      STRB     r0,[r2,#0]
+        0x00000d90:    4770        pG      BX       lr
+        0x00000d92:    0000        ..      MOVS     r0,r0
+    i.clear_LCD
+    clear_LCD
+        0x00000d94:    b530        0.      PUSH     {r4,r5,lr}
+        0x00000d96:    2100        .!      MOVS     r1,#0
+        0x00000d98:    4d12        .M      LDR      r5,[pc,#72] ; [0xde4] = 0x2000016c
+        0x00000d9a:    460a        .F      MOV      r2,r1
+        0x00000d9c:    17cb        ..      ASRS     r3,r1,#31
+        0x00000d9e:    0f5b        [.      LSRS     r3,r3,#29
+        0x00000da0:    185b        [.      ADDS     r3,r3,r1
+        0x00000da2:    2000        .       MOVS     r0,#0
+        0x00000da4:    10db        ..      ASRS     r3,r3,#3
+        0x00000da6:    01db        ..      LSLS     r3,r3,#7
+        0x00000da8:    181c        ..      ADDS     r4,r3,r0
+        0x00000daa:    1964        d.      ADDS     r4,r4,r5
+        0x00000dac:    1c40        @.      ADDS     r0,r0,#1
+        0x00000dae:    b200        ..      SXTH     r0,r0
+        0x00000db0:    7022        "p      STRB     r2,[r4,#0]
+        0x00000db2:    2880        .(      CMP      r0,#0x80
+        0x00000db4:    dbf8        ..      BLT      0xda8 ; clear_LCD + 20
+        0x00000db6:    1c49        I.      ADDS     r1,r1,#1
+        0x00000db8:    b209        ..      SXTH     r1,r1
+        0x00000dba:    2940        @)      CMP      r1,#0x40
+        0x00000dbc:    dbee        ..      BLT      0xd9c ; clear_LCD + 8
+        0x00000dbe:    2100        .!      MOVS     r1,#0
+        0x00000dc0:    4608        .F      MOV      r0,r1
+        0x00000dc2:    f000f8a5    ....    BL       lcdSetAddr ; 0xf10
+        0x00000dc6:    2400        .$      MOVS     r4,#0
+        0x00000dc8:    2521        !%      MOVS     r5,#0x21
+        0x00000dca:    016d        m.      LSLS     r5,r5,#5
+        0x00000dcc:    2000        .       MOVS     r0,#0
+        0x00000dce:    f000f8eb    ....    BL       lcdWriteData ; 0xfa8
+        0x00000dd2:    1c64        d.      ADDS     r4,r4,#1
+        0x00000dd4:    b224        $.      SXTH     r4,r4
+        0x00000dd6:    42ac        .B      CMP      r4,r5
+        0x00000dd8:    dbf8        ..      BLT      0xdcc ; clear_LCD + 56
+        0x00000dda:    200f        .       MOVS     r0,#0xf
+        0x00000ddc:    f000f8e4    ....    BL       lcdWriteData ; 0xfa8
+        0x00000de0:    bd30        0.      POP      {r4,r5,pc}
+    $d
+        0x00000de2:    0000        ..      DCW    0
+        0x00000de4:    2000016c    l..     DCD    536871276
+    $t
+    i.draw_Bmp32x8
+    draw_Bmp32x8
+        0x00000de8:    b5ff        ..      PUSH     {r0-r7,lr}
+        0x00000dea:    b081        ..      SUB      sp,sp,#4
+        0x00000dec:    9801        ..      LDR      r0,[sp,#4]
+        0x00000dee:    460f        .F      MOV      r7,r1
+        0x00000df0:    2879        y(      CMP      r0,#0x79
+        0x00000df2:    da1c        ..      BGE      0xe2e ; draw_Bmp32x8 + 70
+        0x00000df4:    2f39        9/      CMP      r7,#0x39
+        0x00000df6:    da1a        ..      BGE      0xe2e ; draw_Bmp32x8 + 70
+        0x00000df8:    2500        .%      MOVS     r5,#0
+        0x00000dfa:    9801        ..      LDR      r0,[sp,#4]
+        0x00000dfc:    1940        @.      ADDS     r0,r0,r5
+        0x00000dfe:    b2c0        ..      UXTB     r0,r0
+        0x00000e00:    9000        ..      STR      r0,[sp,#0]
+        0x00000e02:    980a        ..      LDR      r0,[sp,#0x28]
+        0x00000e04:    2400        .$      MOVS     r4,#0
+        0x00000e06:    5d46        F]      LDRB     r6,[r0,r5]
+        0x00000e08:    1938        8.      ADDS     r0,r7,r4
+        0x00000e0a:    b2c1        ..      UXTB     r1,r0
+        0x00000e0c:    2001        .       MOVS     r0,#1
+        0x00000e0e:    40a0        .@      LSLS     r0,r0,r4
+        0x00000e10:    4230        0B      TST      r0,r6
+        0x00000e12:    d004        ..      BEQ      0xe1e ; draw_Bmp32x8 + 54
+        0x00000e14:    9b04        ..      LDR      r3,[sp,#0x10]
+        0x00000e16:    9a03        ..      LDR      r2,[sp,#0xc]
+        0x00000e18:    9800        ..      LDR      r0,[sp,#0]
+        0x00000e1a:    f000f82f    ../.    BL       draw_Pixel ; 0xe7c
+        0x00000e1e:    1c64        d.      ADDS     r4,r4,#1
+        0x00000e20:    b2e4        ..      UXTB     r4,r4
+        0x00000e22:    2c08        .,      CMP      r4,#8
+        0x00000e24:    d3f0        ..      BCC      0xe08 ; draw_Bmp32x8 + 32
+        0x00000e26:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000e28:    b2ed        ..      UXTB     r5,r5
+        0x00000e2a:    2d20         -      CMP      r5,#0x20
+        0x00000e2c:    d3e5        ..      BCC      0xdfa ; draw_Bmp32x8 + 18
+        0x00000e2e:    b005        ..      ADD      sp,sp,#0x14
+        0x00000e30:    bdf0        ..      POP      {r4-r7,pc}
+    i.draw_Bmp8x8
+    draw_Bmp8x8
+        0x00000e32:    b5ff        ..      PUSH     {r0-r7,lr}
+        0x00000e34:    b081        ..      SUB      sp,sp,#4
+        0x00000e36:    9801        ..      LDR      r0,[sp,#4]
+        0x00000e38:    460f        .F      MOV      r7,r1
+        0x00000e3a:    2879        y(      CMP      r0,#0x79
+        0x00000e3c:    da1c        ..      BGE      0xe78 ; draw_Bmp8x8 + 70
+        0x00000e3e:    2f39        9/      CMP      r7,#0x39
+        0x00000e40:    da1a        ..      BGE      0xe78 ; draw_Bmp8x8 + 70
+        0x00000e42:    2500        .%      MOVS     r5,#0
+        0x00000e44:    9801        ..      LDR      r0,[sp,#4]
+        0x00000e46:    1940        @.      ADDS     r0,r0,r5
+        0x00000e48:    b2c0        ..      UXTB     r0,r0
+        0x00000e4a:    9000        ..      STR      r0,[sp,#0]
+        0x00000e4c:    980a        ..      LDR      r0,[sp,#0x28]
+        0x00000e4e:    2400        .$      MOVS     r4,#0
+        0x00000e50:    5d46        F]      LDRB     r6,[r0,r5]
+        0x00000e52:    1938        8.      ADDS     r0,r7,r4
+        0x00000e54:    b2c1        ..      UXTB     r1,r0
+        0x00000e56:    2001        .       MOVS     r0,#1
+        0x00000e58:    40a0        .@      LSLS     r0,r0,r4
+        0x00000e5a:    4230        0B      TST      r0,r6
+        0x00000e5c:    d004        ..      BEQ      0xe68 ; draw_Bmp8x8 + 54
+        0x00000e5e:    9b04        ..      LDR      r3,[sp,#0x10]
+        0x00000e60:    9a03        ..      LDR      r2,[sp,#0xc]
+        0x00000e62:    9800        ..      LDR      r0,[sp,#0]
+        0x00000e64:    f000f80a    ....    BL       draw_Pixel ; 0xe7c
+        0x00000e68:    1c64        d.      ADDS     r4,r4,#1
+        0x00000e6a:    b2e4        ..      UXTB     r4,r4
+        0x00000e6c:    2c08        .,      CMP      r4,#8
+        0x00000e6e:    d3f0        ..      BCC      0xe52 ; draw_Bmp8x8 + 32
+        0x00000e70:    1c6d        m.      ADDS     r5,r5,#1
+        0x00000e72:    b2ed        ..      UXTB     r5,r5
+        0x00000e74:    2d08        .-      CMP      r5,#8
+        0x00000e76:    d3e5        ..      BCC      0xe44 ; draw_Bmp8x8 + 18
+        0x00000e78:    b005        ..      ADD      sp,sp,#0x14
+        0x00000e7a:    bdf0        ..      POP      {r4-r7,pc}
+    i.draw_Pixel
+    draw_Pixel
+        0x00000e7c:    b530        0.      PUSH     {r4,r5,lr}
+        0x00000e7e:    17cb        ..      ASRS     r3,r1,#31
+        0x00000e80:    0f5b        [.      LSRS     r3,r3,#29
+        0x00000e82:    185c        \.      ADDS     r4,r3,r1
+        0x00000e84:    08e3        ..      LSRS     r3,r4,#3
+        0x00000e86:    00db        ..      LSLS     r3,r3,#3
+        0x00000e88:    1acb        ..      SUBS     r3,r1,r3
+        0x00000e8a:    10e5        ..      ASRS     r5,r4,#3
+        0x00000e8c:    01e9        ..      LSLS     r1,r5,#7
+        0x00000e8e:    180c        ..      ADDS     r4,r1,r0
+        0x00000e90:    490b        .I      LDR      r1,[pc,#44] ; [0xec0] = 0x2000016c
+        0x00000e92:    1864        d.      ADDS     r4,r4,r1
+        0x00000e94:    7821        !x      LDRB     r1,[r4,#0]
+        0x00000e96:    2a00        .*      CMP      r2,#0
+        0x00000e98:    d003        ..      BEQ      0xea2 ; draw_Pixel + 38
+        0x00000e9a:    2201        ."      MOVS     r2,#1
+        0x00000e9c:    409a        .@      LSLS     r2,r2,r3
+        0x00000e9e:    4311        .C      ORRS     r1,r1,r2
+        0x00000ea0:    e002        ..      B        0xea8 ; draw_Pixel + 44
+        0x00000ea2:    22fe        ."      MOVS     r2,#0xfe
+        0x00000ea4:    409a        .@      LSLS     r2,r2,r3
+        0x00000ea6:    4011        .@      ANDS     r1,r1,r2
+        0x00000ea8:    7021        !p      STRB     r1,[r4,#0]
+        0x00000eaa:    2181        .!      MOVS     r1,#0x81
+        0x00000eac:    1a08        ..      SUBS     r0,r1,r0
+        0x00000eae:    b2c1        ..      UXTB     r1,r0
+        0x00000eb0:    b2e8        ..      UXTB     r0,r5
+        0x00000eb2:    f000f82d    ..-.    BL       lcdSetAddr ; 0xf10
+        0x00000eb6:    7820         x      LDRB     r0,[r4,#0]
+        0x00000eb8:    f000f876    ..v.    BL       lcdWriteData ; 0xfa8
+        0x00000ebc:    bd30        0.      POP      {r4,r5,pc}
+    $d
+        0x00000ebe:    0000        ..      DCW    0
+        0x00000ec0:    2000016c    l..     DCD    536871276
+    $t
+    i.init_LCD
+    init_LCD
+        0x00000ec4:    b510        ..      PUSH     {r4,lr}
+        0x00000ec6:    f000f811    ....    BL       init_SPI3 ; 0xeec
+        0x00000eca:    20eb        .       MOVS     r0,#0xeb
+        0x00000ecc:    f000f858    ..X.    BL       lcdWriteCommand ; 0xf80
+        0x00000ed0:    2081        .       MOVS     r0,#0x81
+        0x00000ed2:    f000f855    ..U.    BL       lcdWriteCommand ; 0xf80
+        0x00000ed6:    20a0        .       MOVS     r0,#0xa0
+        0x00000ed8:    f000f852    ..R.    BL       lcdWriteCommand ; 0xf80
+        0x00000edc:    20c0        .       MOVS     r0,#0xc0
+        0x00000ede:    f000f84f    ..O.    BL       lcdWriteCommand ; 0xf80
+        0x00000ee2:    20af        .       MOVS     r0,#0xaf
+        0x00000ee4:    f000f84c    ..L.    BL       lcdWriteCommand ; 0xf80
+        0x00000ee8:    bd10        ..      POP      {r4,pc}
+        0x00000eea:    0000        ..      MOVS     r0,r0
+    i.init_SPI3
+    init_SPI3
+        0x00000eec:    b538        8.      PUSH     {r3-r5,lr}
+        0x00000eee:    4806        .H      LDR      r0,[pc,#24] ; [0xf08] = 0xf4240
+        0x00000ef0:    4c06        .L      LDR      r4,[pc,#24] ; [0xf0c] = 0x40134000
+        0x00000ef2:    9000        ..      STR      r0,[sp,#0]
+        0x00000ef4:    2309        .#      MOVS     r3,#9
+        0x00000ef6:    2204        ."      MOVS     r2,#4
+        0x00000ef8:    2100        .!      MOVS     r1,#0
+        0x00000efa:    4620         F      MOV      r0,r4
+        0x00000efc:    f7fffb7c    ..|.    BL       SPI_Open ; 0x5f8
+        0x00000f00:    4620         F      MOV      r0,r4
+        0x00000f02:    f7fffb73    ..s.    BL       SPI_DisableAutoSS ; 0x5ec
+        0x00000f06:    bd38        8.      POP      {r3-r5,pc}
+    $d
+        0x00000f08:    000f4240    @B..    DCD    1000000
+        0x00000f0c:    40134000    .@.@    DCD    1075003392
+    $t
+    i.lcdSetAddr
+    lcdSetAddr
+        0x00000f10:    b510        ..      PUSH     {r4,lr}
+        0x00000f12:    4a1a        .J      LDR      r2,[pc,#104] ; [0xf7c] = 0x40134000
+        0x00000f14:    6894        .h      LDR      r4,[r2,#8]
+        0x00000f16:    230d        .#      MOVS     r3,#0xd
+        0x00000f18:    439c        .C      BICS     r4,r4,r3
+        0x00000f1a:    1c64        d.      ADDS     r4,r4,#1
+        0x00000f1c:    6094        .`      STR      r4,[r2,#8]
+        0x00000f1e:    24b0        .$      MOVS     r4,#0xb0
+        0x00000f20:    4320         C      ORRS     r0,r0,r4
+        0x00000f22:    6210        .b      STR      r0,[r2,#0x20]
+        0x00000f24:    6810        .h      LDR      r0,[r2,#0]
+        0x00000f26:    2401        .$      MOVS     r4,#1
+        0x00000f28:    4320         C      ORRS     r0,r0,r4
+        0x00000f2a:    6010        .`      STR      r0,[r2,#0]
+        0x00000f2c:    6810        .h      LDR      r0,[r2,#0]
+        0x00000f2e:    07c0        ..      LSLS     r0,r0,#31
+        0x00000f30:    d1fc        ..      BNE      0xf2c ; lcdSetAddr + 28
+        0x00000f32:    6890        .h      LDR      r0,[r2,#8]
+        0x00000f34:    4398        .C      BICS     r0,r0,r3
+        0x00000f36:    6090        .`      STR      r0,[r2,#8]
+        0x00000f38:    6890        .h      LDR      r0,[r2,#8]
+        0x00000f3a:    4398        .C      BICS     r0,r0,r3
+        0x00000f3c:    1c40        @.      ADDS     r0,r0,#1
+        0x00000f3e:    6090        .`      STR      r0,[r2,#8]
+        0x00000f40:    0908        ..      LSRS     r0,r1,#4
+        0x00000f42:    3010        .0      ADDS     r0,r0,#0x10
+        0x00000f44:    6210        .b      STR      r0,[r2,#0x20]
+        0x00000f46:    6810        .h      LDR      r0,[r2,#0]
+        0x00000f48:    4320         C      ORRS     r0,r0,r4
+        0x00000f4a:    6010        .`      STR      r0,[r2,#0]
+        0x00000f4c:    6810        .h      LDR      r0,[r2,#0]
+        0x00000f4e:    07c0        ..      LSLS     r0,r0,#31
+        0x00000f50:    d1fc        ..      BNE      0xf4c ; lcdSetAddr + 60
+        0x00000f52:    6890        .h      LDR      r0,[r2,#8]
+        0x00000f54:    4398        .C      BICS     r0,r0,r3
+        0x00000f56:    6090        .`      STR      r0,[r2,#8]
+        0x00000f58:    6890        .h      LDR      r0,[r2,#8]
+        0x00000f5a:    4398        .C      BICS     r0,r0,r3
+        0x00000f5c:    1c40        @.      ADDS     r0,r0,#1
+        0x00000f5e:    6090        .`      STR      r0,[r2,#8]
+        0x00000f60:    0708        ..      LSLS     r0,r1,#28
+        0x00000f62:    0f00        ..      LSRS     r0,r0,#28
+        0x00000f64:    6210        .b      STR      r0,[r2,#0x20]
+        0x00000f66:    6810        .h      LDR      r0,[r2,#0]
+        0x00000f68:    4320         C      ORRS     r0,r0,r4
+        0x00000f6a:    6010        .`      STR      r0,[r2,#0]
+        0x00000f6c:    6810        .h      LDR      r0,[r2,#0]
+        0x00000f6e:    07c0        ..      LSLS     r0,r0,#31
+        0x00000f70:    d1fc        ..      BNE      0xf6c ; lcdSetAddr + 92
+        0x00000f72:    6890        .h      LDR      r0,[r2,#8]
+        0x00000f74:    4398        .C      BICS     r0,r0,r3
+        0x00000f76:    6090        .`      STR      r0,[r2,#8]
+        0x00000f78:    bd10        ..      POP      {r4,pc}
+    $d
+        0x00000f7a:    0000        ..      DCW    0
+        0x00000f7c:    40134000    .@.@    DCD    1075003392
+    $t
+    i.lcdWriteCommand
+    lcdWriteCommand
+        0x00000f80:    4908        .I      LDR      r1,[pc,#32] ; [0xfa4] = 0x40134000
+        0x00000f82:    688b        .h      LDR      r3,[r1,#8]
+        0x00000f84:    220d        ."      MOVS     r2,#0xd
+        0x00000f86:    4393        .C      BICS     r3,r3,r2
+        0x00000f88:    1c5b        [.      ADDS     r3,r3,#1
+        0x00000f8a:    608b        .`      STR      r3,[r1,#8]
+        0x00000f8c:    6208        .b      STR      r0,[r1,#0x20]
+        0x00000f8e:    6808        .h      LDR      r0,[r1,#0]
+        0x00000f90:    2301        .#      MOVS     r3,#1
+        0x00000f92:    4318        .C      ORRS     r0,r0,r3
+        0x00000f94:    6008        .`      STR      r0,[r1,#0]
+        0x00000f96:    6808        .h      LDR      r0,[r1,#0]
+        0x00000f98:    07c0        ..      LSLS     r0,r0,#31
+        0x00000f9a:    d1fc        ..      BNE      0xf96 ; lcdWriteCommand + 22
+        0x00000f9c:    6888        .h      LDR      r0,[r1,#8]
+        0x00000f9e:    4390        .C      BICS     r0,r0,r2
+        0x00000fa0:    6088        .`      STR      r0,[r1,#8]
+        0x00000fa2:    4770        pG      BX       lr
+    $d
+        0x00000fa4:    40134000    .@.@    DCD    1075003392
+    $t
+    i.lcdWriteData
+    lcdWriteData
+        0x00000fa8:    4909        .I      LDR      r1,[pc,#36] ; [0xfd0] = 0x40134000
+        0x00000faa:    688b        .h      LDR      r3,[r1,#8]
+        0x00000fac:    220d        ."      MOVS     r2,#0xd
+        0x00000fae:    4393        .C      BICS     r3,r3,r2
+        0x00000fb0:    1c5b        [.      ADDS     r3,r3,#1
+        0x00000fb2:    608b        .`      STR      r3,[r1,#8]
+        0x00000fb4:    30ff        .0      ADDS     r0,r0,#0xff
+        0x00000fb6:    3001        .0      ADDS     r0,#1
+        0x00000fb8:    6208        .b      STR      r0,[r1,#0x20]
+        0x00000fba:    6808        .h      LDR      r0,[r1,#0]
+        0x00000fbc:    2301        .#      MOVS     r3,#1
+        0x00000fbe:    4318        .C      ORRS     r0,r0,r3
+        0x00000fc0:    6008        .`      STR      r0,[r1,#0]
+        0x00000fc2:    6808        .h      LDR      r0,[r1,#0]
+        0x00000fc4:    07c0        ..      LSLS     r0,r0,#31
+        0x00000fc6:    d1fc        ..      BNE      0xfc2 ; lcdWriteData + 26
+        0x00000fc8:    6888        .h      LDR      r0,[r1,#8]
+        0x00000fca:    4390        .C      BICS     r0,r0,r2
+        0x00000fcc:    6088        .`      STR      r0,[r1,#8]
+        0x00000fce:    4770        pG      BX       lr
+    $d
+        0x00000fd0:    40134000    .@.@    DCD    1075003392
+    $t
+    i.main
+    main
+        0x00000fd4:    b51c        ..      PUSH     {r2-r4,lr}
+        0x00000fd6:    f7fffbc3    ....    BL       SYS_Init ; 0x760
+        0x00000fda:    f7fffaf3    ....    BL       Init_UART ; 0x5c4
+        0x00000fde:    f7ffff71    ..q.    BL       init_LCD ; 0xec4
+        0x00000fe2:    f7fffed7    ....    BL       clear_LCD ; 0xd94
+        0x00000fe6:    4c21        !L      LDR      r4,[pc,#132] ; [0x106c] = 0x2000002c
+        0x00000fe8:    2000        .       MOVS     r0,#0
+        0x00000fea:    7160        `q      STRB     r0,[r4,#5]
+        0x00000fec:    4625        %F      MOV      r5,r4
+        0x00000fee:    350e        .5      ADDS     r5,r5,#0xe
+        0x00000ff0:    4e1f        .N      LDR      r6,[pc,#124] ; [0x1070] = 0xffff
+        0x00000ff2:    4638        8F      MOV      r0,r7
+        0x00000ff4:    212b        +!      MOVS     r1,#0x2b
+        0x00000ff6:    f7fff893    ....    BL       __aeabi_uidiv ; 0x120
+        0x00000ffa:    4607        .F      MOV      r7,r0
+        0x00000ffc:    b200        ..      SXTH     r0,r0
+        0x00000ffe:    9001        ..      STR      r0,[sp,#4]
+        0x00001000:    463a        :F      MOV      r2,r7
+        0x00001002:    a11c        ..      ADR      r1,{pc}+0x72 ; 0x1074
+        0x00001004:    481d        .H      LDR      r0,[pc,#116] ; [0x107c] = 0x2000005c
+        0x00001006:    f7fffcf3    ....    BL       __0sprintf$6 ; 0x9f0
+        0x0000100a:    2204        ."      MOVS     r2,#4
+        0x0000100c:    491b        .I      LDR      r1,[pc,#108] ; [0x107c] = 0x2000005c
+        0x0000100e:    481c        .H      LDR      r0,[pc,#112] ; [0x1080] = 0x40050000
+        0x00001010:    f7fffcd8    ....    BL       UART_Write ; 0x9c4
+        0x00001014:    2004        .       MOVS     r0,#4
+        0x00001016:    9500        ..      STR      r5,[sp,#0]
+        0x00001018:    2300        .#      MOVS     r3,#0
+        0x0000101a:    4632        2F      MOV      r2,r6
+        0x0000101c:    2132        2!      MOVS     r1,#0x32
+        0x0000101e:    5620         V      LDRSB    r0,[r4,r0]
+        0x00001020:    f7fffee2    ....    BL       draw_Bmp32x8 ; 0xde8
+        0x00001024:    2300        .#      MOVS     r3,#0
+        0x00001026:    4632        2F      MOV      r2,r6
+        0x00001028:    2106        .!      MOVS     r1,#6
+        0x0000102a:    9500        ..      STR      r5,[sp,#0]
+        0x0000102c:    9801        ..      LDR      r0,[sp,#4]
+        0x0000102e:    f7fffedb    ....    BL       draw_Bmp32x8 ; 0xde8
+        0x00001032:    480e        .H      LDR      r0,[pc,#56] ; [0x106c] = 0x2000002c
+        0x00001034:    2103        .!      MOVS     r1,#3
+        0x00001036:    1d80        ..      ADDS     r0,r0,#6
+        0x00001038:    9000        ..      STR      r0,[sp,#0]
+        0x0000103a:    2002        .       MOVS     r0,#2
+        0x0000103c:    2300        .#      MOVS     r3,#0
+        0x0000103e:    4632        2F      MOV      r2,r6
+        0x00001040:    5661        aV      LDRSB    r1,[r4,r1]
+        0x00001042:    5620         V      LDRSB    r0,[r4,r0]
+        0x00001044:    f7fffef5    ....    BL       draw_Bmp8x8 ; 0xe32
+        0x00001048:    480e        .H      LDR      r0,[pc,#56] ; [0x1084] = 0x20000004
+        0x0000104a:    6801        .h      LDR      r1,[r0,#0]
+        0x0000104c:    480e        .H      LDR      r0,[pc,#56] ; [0x1088] = 0x186a0
+        0x0000104e:    4341        AC      MULS     r1,r0,r1
+        0x00001050:    480e        .H      LDR      r0,[pc,#56] ; [0x108c] = 0xe000e000
+        0x00001052:    6141        Aa      STR      r1,[r0,#0x14]
+        0x00001054:    2200        ."      MOVS     r2,#0
+        0x00001056:    6182        .a      STR      r2,[r0,#0x18]
+        0x00001058:    2105        .!      MOVS     r1,#5
+        0x0000105a:    6101        .a      STR      r1,[r0,#0x10]
+        0x0000105c:    6901        .i      LDR      r1,[r0,#0x10]
+        0x0000105e:    03c9        ..      LSLS     r1,r1,#15
+        0x00001060:    d5fc        ..      BPL      0x105c ; main + 136
+        0x00001062:    6102        .a      STR      r2,[r0,#0x10]
+        0x00001064:    f7fffe96    ....    BL       clear_LCD ; 0xd94
+        0x00001068:    e7ca        ..      B        0x1000 ; main + 44
+    $d
+        0x0000106a:    0000        ..      DCW    0
+        0x0000106c:    2000002c    ,..     DCD    536870956
+        0x00001070:    0000ffff    ....    DCD    65535
+        0x00001074:    64333025    %03d    DCD    1681076261
+        0x00001078:    0000000a    ....    DCD    10
+        0x0000107c:    2000005c    \..     DCD    536871004
+        0x00001080:    40050000    ...@    DCD    1074069504
+        0x00001084:    20000004    ...     DCD    536870916
+        0x00001088:    000186a0    ....    DCD    100000
+        0x0000108c:    e000e000    ....    DCD    3758153728
+    $d.realdata
+    .constdata
+        0x00001090:    00000000    ....    DCD    0
+        0x00001094:    00000020     ...    DCD    32
+        0x00001098:    00000000    ....    DCD    0
+        0x0000109c:    00000004    ....    DCD    4
+        0x000010a0:    0000000c    ....    DCD    12
+        0x000010a4:    00000024    $...    DCD    36
+        0x000010a8:    00000000    ....    DCD    0
+        0x000010ac:    00000004    ....    DCD    4
+        0x000010b0:    0000002c    ,...    DCD    44
+        0x000010b4:    00000000    ....    DCD    0
+        0x000010b8:    00000000    ....    DCD    0
+        0x000010bc:    00000004    ....    DCD    4
+        0x000010c0:    0000002c    ,...    DCD    44
+        0x000010c4:    00000000    ....    DCD    0
+    .constdata
+        0x000010c8:    00b71b00    ....    DCD    12000000
+        0x000010cc:    00000000    ....    DCD    0
+        0x000010d0:    00000000    ....    DCD    0
+        0x000010d4:    01518000    ..Q.    DCD    22118400
+        0x000010d8:    00b71b00    ....    DCD    12000000
+        0x000010dc:    00000000    ....    DCD    0
+        0x000010e0:    00000000    ....    DCD    0
+        0x000010e4:    01518000    ..Q.    DCD    22118400
+        0x000010e8:    00b71b00    ....    DCD    12000000
+        0x000010ec:    00000000    ....    DCD    0
+        0x000010f0:    00000000    ....    DCD    0
+        0x000010f4:    01518000    ..Q.    DCD    22118400
+    Region$$Table$$Base
+        0x000010f8:    00001118    ....    DCD    4376
+        0x000010fc:    20000000    ...     DCD    536870912
+        0x00001100:    0000005c    \...    DCD    92
+        0x00001104:    00000a18    ....    DCD    2584
+        0x00001108:    00001174    t...    DCD    4468
+        0x0000110c:    2000005c    \..     DCD    536871004
+        0x00001110:    00000914    ....    DCD    2324
+        0x00001114:    00000a28    (...    DCD    2600
+    Region$$Table$$Limit
+
+** Section #2 'ER_RW' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 92 bytes (alignment 4)
+    Address: 0x20000000
+
+
+** Section #3 'ER_ZI' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 2324 bytes (alignment 8)
+    Address: 0x2000005c
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 1328 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 29380 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 8004 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 3684 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 336392 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 1214 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 5248 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 186
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 4404 bytes
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 11184 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+

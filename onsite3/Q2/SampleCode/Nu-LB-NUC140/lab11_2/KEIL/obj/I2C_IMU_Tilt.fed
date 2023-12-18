@@ -1,0 +1,194 @@
+;#<FEEDBACK># ARM Linker, 5060960: Last Updated: Mon Dec 18 21:30:43 2023
+;VERSION 0.2
+;FILE adc.o
+ADC_Close <= USED 0
+ADC_DisableHWTrigger <= USED 0
+ADC_EnableHWTrigger <= USED 0
+__asm___5_adc_c_ADC_Open____REV16 <= USED 0
+__asm___5_adc_c_ADC_Open____REVSH <= USED 0
+;FILE clk.o
+CLK_DisableCKO <= USED 0
+CLK_DisableModuleClock <= USED 0
+CLK_DisablePLL <= USED 0
+CLK_DisableSysTick <= USED 0
+CLK_DisableXtalRC <= USED 0
+CLK_EnableCKO <= USED 0
+CLK_EnableSysTick <= USED 0
+CLK_GetCPUFreq <= USED 0
+CLK_GetHXTFreq <= USED 0
+CLK_GetLXTFreq <= USED 0
+CLK_GetPCLKFreq <= USED 0
+CLK_Idle <= USED 0
+CLK_PowerDown <= USED 0
+CLK_SetSysTickClockSrc <= USED 0
+__asm___5_clk_c_9b5832dc____REV16 <= USED 0
+__asm___5_clk_c_9b5832dc____REVSH <= USED 0
+;FILE draw2d.o
+__asm___8_Draw2D_c_d834b40d____REV16 <= USED 0
+__asm___8_Draw2D_c_d834b40d____REVSH <= USED 0
+draw_Circle <= USED 0
+draw_Line <= USED 0
+draw_Rectangle <= USED 0
+draw_Triangle <= USED 0
+fill_Rectangle <= USED 0
+;FILE gpio.o
+GPIO_DisableInt <= USED 0
+__asm___6_gpio_c_f8f858a7____REV16 <= USED 0
+__asm___6_gpio_c_f8f858a7____REVSH <= USED 0
+;FILE i2c.o
+I2C_ClearTimeoutFlag <= USED 0
+I2C_Close <= USED 0
+I2C_DisableInt <= USED 0
+I2C_DisableTimeout <= USED 0
+I2C_DisableWakeup <= USED 0
+I2C_EnableInt <= USED 0
+I2C_EnableTimeout <= USED 0
+I2C_EnableWakeup <= USED 0
+I2C_GetBusClockFreq <= USED 0
+I2C_GetData <= USED 0
+I2C_GetIntFlag <= USED 0
+I2C_GetStatus <= USED 0
+I2C_Open <= USED 0
+I2C_SetBusClockFreq <= USED 0
+I2C_SetData <= USED 0
+I2C_SetSlaveAddr <= USED 0
+I2C_SetSlaveAddrMask <= USED 0
+I2C_Trigger <= USED 0
+__asm___5_i2c_c_I2C_Open____REV16 <= USED 0
+__asm___5_i2c_c_I2C_Open____REVSH <= USED 0
+;FILE i2cdev.o
+I2C_readBytes <= USED 0
+I2C_writeBytes <= USED 0
+__asm___8_I2Cdev_c_844b0337____REV16 <= USED 0
+__asm___8_I2Cdev_c_844b0337____REVSH <= USED 0
+;FILE lcd.o
+__asm___5_LCD_c_Font8x16____REV16 <= USED 0
+__asm___5_LCD_c_Font8x16____REVSH <= USED 0
+draw_Bmp120x8 <= USED 0
+draw_Bmp16x16 <= USED 0
+draw_Bmp16x24 <= USED 0
+draw_Bmp16x32 <= USED 0
+draw_Bmp16x40 <= USED 0
+draw_Bmp16x48 <= USED 0
+draw_Bmp16x64 <= USED 0
+draw_Bmp16x8 <= USED 0
+draw_Bmp32x16 <= USED 0
+draw_Bmp32x32 <= USED 0
+draw_Bmp32x48 <= USED 0
+draw_Bmp32x64 <= USED 0
+draw_Bmp64x64 <= USED 0
+draw_Bmp8x16 <= USED 0
+draw_LCD <= USED 0
+printC <= USED 0
+printC_5x7 <= USED 0
+printS <= USED 0
+printS_5x7 <= USED 0
+print_Line <= USED 0
+;FILE main.o
+__asm___6_main_c_1f2be225____REV16 <= USED 0
+__asm___6_main_c_1f2be225____REVSH <= USED 0
+;FILE mpu6050.o
+Init_MPU6050 <= USED 0
+MPU6050_ReadByte <= USED 0
+MPU6050_WriteByte <= USED 0
+Read_MPU6050_AccX <= USED 0
+Read_MPU6050_AccY <= USED 0
+Read_MPU6050_AccZ <= USED 0
+Read_MPU6050_GyroX <= USED 0
+Read_MPU6050_GyroY <= USED 0
+Read_MPU6050_GyroZ <= USED 0
+__asm___9_MPU6050_c_707d7ea4____REV16 <= USED 0
+__asm___9_MPU6050_c_707d7ea4____REVSH <= USED 0
+;FILE pwm.o
+PWM_ClearADCTriggerFlag <= USED 0
+PWM_ClearCaptureIntFlag <= USED 0
+PWM_ClearDutyIntFlag <= USED 0
+PWM_ClearPeriodIntFlag <= USED 0
+PWM_ConfigCaptureChannel <= USED 0
+PWM_DisableADCTrigger <= USED 0
+PWM_DisableCapture <= USED 0
+PWM_DisableCaptureInt <= USED 0
+PWM_DisableDeadZone <= USED 0
+PWM_DisableDutyInt <= USED 0
+PWM_DisablePeriodInt <= USED 0
+PWM_EnableADCTrigger <= USED 0
+PWM_EnableCapture <= USED 0
+PWM_EnableCaptureInt <= USED 0
+PWM_EnableDeadZone <= USED 0
+PWM_EnableDutyInt <= USED 0
+PWM_EnablePeriodInt <= USED 0
+PWM_ForceStop <= USED 0
+PWM_GetADCTriggerFlag <= USED 0
+PWM_GetCaptureIntFlag <= USED 0
+PWM_GetDutyIntFlag <= USED 0
+PWM_GetPeriodIntFlag <= USED 0
+PWM_Stop <= USED 0
+__asm___5_pwm_c_c4896a9e____REV16 <= USED 0
+__asm___5_pwm_c_c4896a9e____REVSH <= USED 0
+;FILE scankey.o
+ScanKey <= USED 0
+__asm___9_Scankey_c_delay____REV16 <= USED 0
+__asm___9_Scankey_c_delay____REVSH <= USED 0
+delay <= USED 0
+;FILE seven_segment.o
+__asm___15_Seven_Segment_c_SEG_BUF____REV16 <= USED 0
+__asm___15_Seven_Segment_c_SEG_BUF____REVSH <= USED 0
+;FILE spi.o
+SPI_ClearIntFlag <= USED 0
+SPI_ClearRxFIFO <= USED 0
+SPI_ClearTxFIFO <= USED 0
+SPI_Close <= USED 0
+SPI_DisableFIFO <= USED 0
+SPI_DisableInt <= USED 0
+SPI_EnableAutoSS <= USED 0
+SPI_EnableFIFO <= USED 0
+SPI_EnableInt <= USED 0
+SPI_GetBusClock <= USED 0
+SPI_GetIntFlag <= USED 0
+SPI_GetStatus <= USED 0
+SPI_SetBusClock <= USED 0
+__asm___5_spi_c_SPI_Open____REV16 <= USED 0
+__asm___5_spi_c_SPI_Open____REVSH <= USED 0
+;FILE startup_nuc100series.o
+;FILE sys.o
+SYS_ClearResetSrc <= USED 0
+SYS_DisableBOD <= USED 0
+SYS_EnableBOD <= USED 0
+SYS_GetBODStatus <= USED 0
+SYS_GetResetSrc <= USED 0
+SYS_IsRegLocked <= USED 0
+SYS_ReadPDID <= USED 0
+SYS_ResetCPU <= USED 0
+SYS_ResetChip <= USED 0
+SYS_ResetModule <= USED 0
+__asm___5_sys_c_962b9fbe____REV16 <= USED 0
+__asm___5_sys_c_962b9fbe____REVSH <= USED 0
+;FILE sys_init.o
+__asm___10_SYS_init_c_SYS_Init____REV16 <= USED 0
+__asm___10_SYS_init_c_SYS_Init____REVSH <= USED 0
+;FILE system_nuc100series.o
+__asm___21_system_NUC100Series_c_5d646a67____REV16 <= USED 0
+__asm___21_system_NUC100Series_c_5d646a67____REVSH <= USED 0
+;FILE timer.o
+TIMER_Close <= USED 0
+TIMER_Delay <= USED 0
+TIMER_DisableCapture <= USED 0
+TIMER_DisableEventCounter <= USED 0
+TIMER_EnableCapture <= USED 0
+TIMER_EnableEventCounter <= USED 0
+__asm___7_timer_c_5bec749a____REV16 <= USED 0
+__asm___7_timer_c_5bec749a____REVSH <= USED 0
+;FILE uart.o
+UART_ClearIntFlag <= USED 0
+UART_Close <= USED 0
+UART_DisableFlowCtrl <= USED 0
+UART_DisableInt <= USED 0
+UART_EnableFlowCtrl <= USED 0
+UART_EnableInt <= USED 0
+UART_SelectIrDAMode <= USED 0
+UART_SelectLINMode <= USED 0
+UART_SelectRS485Mode <= USED 0
+UART_SetLine_Config <= USED 0
+UART_SetTimeoutCnt <= USED 0
+__asm___6_uart_c_f12f5b44____REV16 <= USED 0
+__asm___6_uart_c_f12f5b44____REVSH <= USED 0
