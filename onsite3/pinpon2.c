@@ -11,7 +11,8 @@
 #include "LCD.h"
 #include "Note_Freq.h"
 
-#define RXBUFSIZE 1
+#define RXBUFSIZE 3
+#define TXBUFSIZE 12
 #define FG_COLOR 0xFFFF
 #define BG_COLOR 0x0000
 
@@ -32,9 +33,14 @@ volatile int ball_dirx = 1;
 volatile int ball_diry = 1;
 volatile int pad_x = 0;
 volatile int pad_y = 56;
-volatile char RX_buffer[RXBUFSIZE];
+volatile int ypad_x = 112;
+volatile int ypad_y = 0;
+volatile char RX_buffer[RXBUFSIZE];//you pad_x
+volatile char TX_buffer[TXBUFSIZE];//my pad_x[3],ball_x[3],ball_y[2],digit[4]
+volatile int UARTRead[RXBUFSIZE];
 volatile int digit[4] = {0,0,0,0};
 volatile int resultFlag = 0;
+volatile int forCount = 0;
 char line0[16] = "               ";
 char line1[16] = "               ";
 char line2[16] = "               ";
@@ -130,20 +136,19 @@ void GPAB_IRQHandler(void)
     PA->ISRC = PA->ISRC;	      // clear all GPB pins
 }
 
-// void UART02_IRQHandler(void)
-// {
-// 	  uint32_t u32IntSts= UART0->ISR; // UART interrupt status bit
-// 		uint8_t c;
+void UART02_IRQHandler(void)
+{
+	uint32_t u32IntSts= UART0->ISR; // UART interrupt status bit
+	uint8_t c;
 		
-//     if(u32IntSts & UART_IS_RX_READY(UART1)){
-// 			while (!(UART0->FSR & UART_FSR_RX_EMPTY_Msk)){ // check RX is not empty
-// 				c = UART_READ(UART0);
-// 				if (c!= '0') {
-					
-// 				}
-// 			}		
-//     }
-// }
+    if(u32IntSts & UART_IS_RX_READY(UART1)){
+		UART_Read(UART0,RX_buffer,RXBUFSIZE);
+        for(forCount = 0;forCount<RXBUFSIZE;forCount++){
+            UARTRead[forCount] =RX_buffer[forCount] - 48;
+        }
+        ypad_x = UARTRead[0]*100+UARTRead[1]*10+UARTRead[2];
+    }
+}
 
 void ADC_IRQHandler(void)
 {
@@ -228,10 +233,10 @@ void Init_ALL(void)
     PWM_ConfigOutputChannel(PWM1, PWM_CH0, 50, 50);
     PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
     PWM_Start(PWM1, PWM_CH_0_MASK);
-    // //UART
-    // UART_Open(UART0, 115200);                     // set UART0 baud rate
-    // UART_ENABLE_INT(UART0, UART_IER_RDA_IEN_Msk); // enable UART0 interrupt (triggerred by Read-Data-Available)
-    // NVIC_EnableIRQ(UART02_IRQn);		              // enable Cortex-M0 NVIC interrupt for UART02
+    //UART
+    UART_Open(UART0, 115200);                     // set UART0 baud rate
+    UART_ENABLE_INT(UART0, UART_IER_RDA_IEN_Msk); // enable UART0 interrupt (triggerred by Read-Data-Available)
+    NVIC_EnableIRQ(UART02_IRQn);		              // enable Cortex-M0 NVIC interrupt for UART02
 }
 
 void judgeup(){
@@ -261,6 +266,20 @@ void judgedown(){
     if(digit[1]==1&&digit[0]==1){
         resultFlag = 2;
     }
+}
+void setUARTWrite(){
+    TX_buffer[0] = pad_x/100 + 48;
+    TX_buffer[1] = pad_x/10-pad_x/100*10 + 48;
+    TX_buffer[2] = pad_x%10 + 48;
+    TX_buffer[3] = ball_x/100 + 48;
+    TX_buffer[4] = ball_x/10-ball_x/100*10 + 48;
+    TX_buffer[5] = ball_x%10 + 48;
+    TX_buffer[6] = ball_y/10 + 48;
+    TX_buffer[7] = ball_y%10 + 48;
+    TX_buffer[8] = digit[0] + 48;
+    TX_buffer[9] = digit[1] + 48;
+    TX_buffer[10] = digit[2] + 48;
+    TX_buffer[11] = digit[3] + 48;
 }
 
 int main(void)
@@ -321,7 +340,10 @@ int main(void)
                 draw_Circle(ball_x, ball_y, 8, 0XFF, 0x00);
                 //draw pad
                 draw_Bmp16x8(pad_x,pad_y ,FG_COLOR,BG_COLOR , pad);
-                draw_Bmp16x8(112-pad_x,0 ,FG_COLOR,BG_COLOR , pad);
+                draw_Bmp16x8(ypad_x,ypad_y ,FG_COLOR,BG_COLOR , pad);
+                //UART write
+                setUARTWrite();
+                UART_Write(UART0, TX_buffer, TXBUFSIZE);
             }
             
             switch(KEY_Flag){
