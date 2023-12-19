@@ -182,12 +182,13 @@ void getVR(){
 void Init_ALL(void)
 {
     SYS_Init(); 
-    init_LCD();
-    clear_LCD();
+	init_lcd(TRUE,TRUE);
+    //init_LCD();
+    //clear_LCD();
     OpenSevenSegment();
 		OpenKeyPad();
     u8ADF = 0;
-    //Buzzer
+    /*//Buzzer
     GPIO_SetMode(PB, BIT11, GPIO_MODE_OUTPUT); 
     //LED
 	GPIO_SetMode(PC, (BIT12|BIT13|BIT14|BIT15), GPIO_MODE_OUTPUT);
@@ -212,7 +213,7 @@ void Init_ALL(void)
     NVIC_EnableIRQ(EINT1_IRQn);
     // Enable interrupt de-bounce function and select de-bounce sampling cycle time
     GPIO_SET_DEBOUNCE_TIME(GPIO_DBCLKSRC_LIRC, GPIO_DBCLKSEL_256);
-    GPIO_ENABLE_DEBOUNCE(PB, BIT15);
+    GPIO_ENABLE_DEBOUNCE(PB, BIT15);*/
     //TIMER0
     TIMER_Open(TIMER0, TMR0_OPERATING_MODE,200); // PERIODIC 200HZ = 5ms
     TIMER_EnableInt(TIMER0);
@@ -255,7 +256,7 @@ void judgeup(){
             digit[1] = 0;
         }
 				PWM_DisableOutput(PWM1, PWM_CH_0_MASK);
-        PWM_ConfigOutputChannel(PWM1, PWM_CH0, 523, 20);
+        PWM_ConfigOutputChannel(PWM1, PWM_CH0, 523, 80);
 				PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
     }
 }
@@ -267,21 +268,14 @@ void judgedown(){
             digit[0] = 0;
         }
 				PWM_DisableOutput(PWM1, PWM_CH_0_MASK);
-        PWM_ConfigOutputChannel(PWM1, PWM_CH0, 1046, 20);
+        PWM_ConfigOutputChannel(PWM1, PWM_CH0, 1, 80);
 				PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
     }
 }
 
 int main(void)
 {
-  uint8_t ASSCII;
-  uint16_t music[72] = {
-		E6 ,D6u,E6 ,D6u,E6 ,B5 ,D6 ,C6 ,A5 ,A5 , 0 , 0 ,
-		C5 ,E5 ,A5 ,B5 ,B5 , 0 ,C5 ,A5 ,B5 ,C6 ,C6 , 0 ,
-		E6 ,D6u,E6 ,D6u,E6 ,B5 ,D6 ,C6 ,A5 ,A5 , 0 , 0 ,
-		C5 ,E5 ,A5 ,B5 ,B5 , 0 ,E5 ,C6 ,B5 ,A5 ,A5 , 0 ,
-		B5 ,C6 ,D6 ,E6 ,E6 , 0 ,G5 ,F6 ,E6 ,D6 ,D6 , 0 ,
-		F5 ,E6 ,D6 ,C6 ,C6 , 0 ,E5 ,D6 ,C6 ,B5 ,B5 , 0 };
+
 		int i = 0;
 		int dir;
 		Init_ALL();
@@ -305,10 +299,11 @@ int main(void)
 		}
 
 	 while(1) {
-        if(resultFlag == 0){
+		 
+        if(resultFlag == 0){ 
             
             if (cnt0_5ms % 20 == 0) 
-            {		
+            {	
 								//draw_Bmp32x8(pad_x,pad_y ,BG_COLOR,BG_COLOR , pad);
 								//draw_Bmp32x8(0,0 ,BG_COLOR,BG_COLOR , pad);
                 //draw ball
@@ -327,13 +322,13 @@ int main(void)
                 if (ball_x > 120) {
                     ball_x = 120;
                     ball_dirx = -1;
-                    PWM_ConfigOutputChannel(PWM1, PWM_CH0, 784, 20);
+                    PWM_ConfigOutputChannel(PWM1, PWM_CH0, 2784, 80);
 										PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
                 }
                 if (ball_x < 0) {
                     ball_x = 0;
                     ball_dirx = 1;
-                    PWM_ConfigOutputChannel(PWM1, PWM_CH0, 784, 20);
+                    PWM_ConfigOutputChannel(PWM1, PWM_CH0, 2784, 80);
 										PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
                 }
                 if (ball_y > 56) {
@@ -341,7 +336,7 @@ int main(void)
                     ball_y = 56;
                     ball_diry = -1;
 										if(touchFlag == 0){
-											PWM_ConfigOutputChannel(PWM1, PWM_CH0, 784, 20);
+											PWM_ConfigOutputChannel(PWM1, PWM_CH0, 2784, 80);
 											PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
 										}
                 }
@@ -350,21 +345,28 @@ int main(void)
                     ball_y = 0;
                     ball_diry = 1;
                     if(touchFlag == 0){
-											PWM_ConfigOutputChannel(PWM1, PWM_CH0, 784, 20);
+											PWM_ConfigOutputChannel(PWM1, PWM_CH0, 2784, 80);
 											PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
 										}
 										
                 }
 
                 //draw LCD
-                clear_LCD();
+                //clear_LCD();
                 //draw ball
-								draw_Bmp8x8(ball_x, ball_y,FG_COLOR,BG_COLOR , ball);
+								//draw_Bmp8x8(ball_x, ball_y,FG_COLOR,BG_COLOR , ball);
+								//draw_bitmap_in_buffer(ball,ball_x,ball_y,8,1,FG_COLOR);
 								//draw pad
-								draw_Bmp32x8(pad_x,pad_y ,FG_COLOR,BG_COLOR , pad);
-								draw_Bmp32x8(0,0 ,FG_COLOR,BG_COLOR , pad);
+								//draw_Bmp32x8(pad_x,pad_y ,FG_COLOR,BG_COLOR , pad);
+								//draw_Bmp32x8(0,0 ,FG_COLOR,BG_COLOR , pad);
+								//draw_bitmap_in_buffer(pad,pad_x,pad_y,32,1,FG_COLOR);
+								//draw_bitmap_in_buffer(pad,0,0,32,1,FG_COLOR);
+								draw_bitmap_in_buffer(ball,ball_x,ball_y,8,1,FG_COLOR);
+								draw_bitmap_in_buffer(pad,pad_x,pad_y,32,1,FG_COLOR);
+								draw_bitmap_in_buffer(pad,0,0,32,1,FG_COLOR);
+								show_lcd_buffer();
             }
-					
+						
             switch(KEY_Flag){
                 case 1:// 1
                     KEY_Flag = 0;
@@ -391,7 +393,6 @@ int main(void)
                     KEY_Flag = 0;
                     break;
                 case 7:// =
-                    clear_LCD();
                     KEY_Flag = 0;
                     break;
                 case 8:// speed down
@@ -404,26 +405,6 @@ int main(void)
                     break;
                 default:
                     break;
-            }
-        }else if(resultFlag == 1){
-            clear_LCD();
-            sprintf(line1,"You lose");
-            print_Line(1,line1);
-            for (i=0; i<72; i++) {
-                PWM_ConfigOutputChannel(PWM1, PWM_CH0, music[i], 90); // 0=Buzzer ON
-                if (music[i]!=0) PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
-                else             PWM_DisableOutput(PWM1, PWM_CH_0_MASK);
-                CLK_SysTickDelay(250000/2);
-            }
-        }else if(resultFlag == 2){
-            clear_LCD();
-            sprintf(line1,"You win");
-            print_Line(1,line1);
-            for (i=0; i<72; i++) {
-                PWM_ConfigOutputChannel(PWM1, PWM_CH0, music[i], 90); // 0=Buzzer ON
-                if (music[i]!=0) PWM_EnableOutput(PWM1, PWM_CH_0_MASK);
-                else             PWM_DisableOutput(PWM1, PWM_CH_0_MASK);
-                CLK_SysTickDelay(250000/2);
             }
         }
         
